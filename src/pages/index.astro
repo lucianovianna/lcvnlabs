@@ -6,10 +6,11 @@ import Stack from '../components/sections/Stack.astro';
 import Projetos from '../components/sections/Projetos.astro';
 import Contato from '../components/sections/Contato.astro';
 import LangToggle from '../components/vue/LangToggle.vue';
-import { useI18n } from '../i18n/index';
+import { useI18n, pt, en } from '../i18n/index';
 
 // SSG: render com pt-BR por padrão.
 const t = useI18n('pt');
+const translations = { pt, en };
 ---
 
 <Base>
@@ -17,10 +18,10 @@ const t = useI18n('pt');
     <div class="container header-inner">
       <span class="logo">lcvnlabs</span>
       <nav>
-        <a href="#sobre">{t.nav.about}</a>
-        <a href="#stack">{t.nav.stack}</a>
-        <a href="#projetos">{t.nav.projects}</a>
-        <a href="#contato">{t.nav.contact}</a>
+        <a href="#sobre" data-i18n="nav.about">{t.nav.about}</a>
+        <a href="#stack" data-i18n="nav.stack">{t.nav.stack}</a>
+        <a href="#projetos" data-i18n="nav.projects">{t.nav.projects}</a>
+        <a href="#contato" data-i18n="nav.contact">{t.nav.contact}</a>
       </nav>
       <LangToggle client:load />
     </div>
@@ -33,6 +34,22 @@ const t = useI18n('pt');
     <Projetos t={t} />
     <Contato t={t} />
   </main>
+
+  <script is:inline define:vars={{ translations }}>
+    function resolve(obj, path) {
+      return path.split('.').reduce((acc, key) => acc?.[key], obj);
+    }
+    function applyLocale(locale) {
+      const t = translations[locale] || translations['pt'];
+      document.querySelectorAll('[data-i18n]').forEach((el) => {
+        const text = resolve(t, el.dataset.i18n);
+        if (text != null) el.textContent = text;
+      });
+    }
+    const saved = (typeof localStorage !== 'undefined' && localStorage.getItem('locale')) || 'pt';
+    applyLocale(saved);
+    window.addEventListener('locale-change', (e) => applyLocale(e.detail));
+  </script>
 
   <footer class="site-footer">
     <div class="container">

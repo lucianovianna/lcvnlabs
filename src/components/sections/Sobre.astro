@@ -7,8 +7,8 @@ const { t } = Astro.props;
 <section id="sobre">
   <div class="container">
     <div class="fade-in">
-      <h2>{t.about.heading}</h2>
-      {t.about.bio.map((p) => <p>{p}</p>)}
+      <h2 data-i18n="about.heading">{t.about.heading}</h2>
+      {t.about.bio.map((p, i) => <p data-i18n={`about.bio.${i}`}>{p}</p>)}
     </div>
   </div>
 </section>

@@ -4,21 +4,21 @@ interface Props { t: I18n }
 const { t } = Astro.props;
 
 const stackData = {
-  frontend: ['TypeScript', 'Vue', 'Astro', 'React'],
-  backend: ['Node.js', 'Python', 'FastAPI', 'PostgreSQL'],
-  data: ['SQL', 'Pandas', 'dbt'],
-  devops: ['Docker', 'GitHub Actions', 'Linux'],
+  backend: ['Laravel (PHP)', 'NestJS', 'Node.js'],
+  database: ['PostgreSQL', 'Redis', 'Supabase'],
+  frontend: ['Vue.js', 'TypeScript', 'Astro'],
+  devops: ['AWS', 'Docker', 'GitHub Actions'],
 };
 ---
 
 <section id="stack">
   <div class="container">
     <div class="fade-in">
-      <h2>{t.stack.heading}</h2>
+      <h2 data-i18n="stack.heading">{t.stack.heading}</h2>
       <div class="categories">
         {Object.entries(stackData).map(([key, items]) => (
           <div class="category">
-            <h3>{t.stack.categories[key as keyof typeof t.stack.categories]}</h3>
+            <h3 data-i18n={`stack.categories.${key}`}>{t.stack.categories[key as keyof typeof t.stack.categories]}</h3>
             <ul>
               {items.map((item) => <li>{item}</li>)}
             </ul>
