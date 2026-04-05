@@ -1,1 +1,27 @@
-node_modules
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+
+# Astro generated types
+.astro/
+
+# Environment
+.env
+.env.*
+.env.local
+.env.*.local
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Editor
+.vscode/
+.idea/
+*.iml
