@@ -1,0 +1,100 @@
+---
+import Base from '../layouts/Base.astro';
+import Hero from '../components/sections/Hero.astro';
+import Sobre from '../components/sections/Sobre.astro';
+import Stack from '../components/sections/Stack.astro';
+import Projetos from '../components/sections/Projetos.astro';
+import Contato from '../components/sections/Contato.astro';
+import LangToggle from '../components/vue/LangToggle.vue';
+import { useI18n } from '../i18n/index';
+
+// SSG: render com pt-BR por padrão.
+const t = useI18n('pt');
+---
+
+<Base>
+  <header class="site-header">
+    <div class="container header-inner">
+      <span class="logo">lcvnlabs</span>
+      <nav>
+        <a href="#sobre">{t.nav.about}</a>
+        <a href="#stack">{t.nav.stack}</a>
+        <a href="#projetos">{t.nav.projects}</a>
+        <a href="#contato">{t.nav.contact}</a>
+      </nav>
+      <LangToggle client:load />
+    </div>
+  </header>
+
+  <main>
+    <Hero t={t} />
+    <Sobre t={t} />
+    <Stack t={t} />
+    <Projetos t={t} />
+    <Contato t={t} />
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <span>© {new Date().getFullYear()} Luciano Vianna</span>
+    </div>
+  </footer>
+</Base>
+
+<style>
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  backdrop-filter: blur(8px);
+  background: color-mix(in srgb, var(--color-bg) 85%, transparent);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding-block: 1rem;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: -0.01em;
+  margin-right: auto;
+}
+
+nav {
+  display: flex;
+  gap: 1.5rem;
+}
+
+nav a {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--color-muted);
+  transition: color 0.2s;
+}
+
+nav a:hover {
+  color: var(--color-text);
+  text-decoration: none;
+}
+
+main {
+  padding-top: 4rem;
+}
+
+.site-footer {
+  padding-block: 2rem;
+  border-top: 1px solid var(--color-border);
+}
+
+.site-footer .container {
+  font-size: 0.8rem;
+  color: var(--color-muted);
+}
+</style>

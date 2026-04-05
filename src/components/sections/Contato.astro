@@ -1,0 +1,40 @@
+---
+import type { I18n } from '../../i18n/pt';
+interface Props { t: I18n }
+const { t } = Astro.props;
+---
+
+<section id="contato">
+  <div class="container">
+    <div class="fade-in">
+      <h2>{t.contact.heading}</h2>
+      <p>{t.contact.intro}</p>
+      <div class="links">
+        <a href="https://github.com/lucianovianna" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://linkedin.com/in/lucianovianna" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+p {
+  color: var(--color-muted);
+  margin-bottom: 1.25rem;
+}
+
+.links {
+  display: flex;
+  gap: 1.25rem;
+}
+
+.links a {
+  font-weight: 500;
+}
+</style>
