@@ -10,7 +10,7 @@ export const en: I18n = {
   hero: {
     title: 'Luciano Vianna',
     role: 'Senior Software Engineer · Full Stack',
-    tagline: 'Laravel and Vue.js from server to client — focused on PostgreSQL and high-volume critical systems.',
+    tagline: 'Building software you can rely on.',
   },
   about: {
     heading: 'About me',

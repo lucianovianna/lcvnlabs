@@ -8,7 +8,7 @@ export const pt = {
   hero: {
     title: 'Luciano Vianna',
     role: 'Engenheiro de Software Sênior · Full Stack',
-    tagline: 'Laravel e Vue.js do lado do servidor ao cliente — com foco em PostgreSQL e sistemas críticos de alto volume.',
+    tagline: 'Construindo software que você pode confiar.',
   },
   about: {
     heading: 'Sobre mim',
