@@ -6,6 +6,7 @@ import Stack from '../components/sections/Stack.astro';
 import Projetos from '../components/sections/Projetos.astro';
 import Contato from '../components/sections/Contato.astro';
 import LangToggle from '../components/vue/LangToggle.vue';
+import ThemeToggle from '../components/vue/ThemeToggle.vue';
 import { useI18n, pt, en } from '../i18n/index';
 
 // SSG: render com pt-BR por padrão.
@@ -23,6 +24,7 @@ const translations = { pt, en };
         <a href="#projetos" data-i18n="nav.projects">{t.nav.projects}</a>
         <a href="#contato" data-i18n="nav.contact">{t.nav.contact}</a>
       </nav>
+      <ThemeToggle client:load />
       <LangToggle client:load />
     </div>
   </header>

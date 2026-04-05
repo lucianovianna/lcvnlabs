@@ -18,13 +18,31 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --color-bg: #0f0f0f;
-    --color-surface: #1a1a1a;
-    --color-border: #2a2a2a;
-    --color-text: #f0f0f0;
-    --color-muted: #999999;
+    --color-bg: #18181b;
+    --color-surface: #27272a;
+    --color-border: #3f3f46;
+    --color-text: #fafafa;
+    --color-muted: #a1a1aa;
     --color-accent: #60a5fa;
   }
+}
+
+html.dark {
+  --color-bg: #18181b;
+  --color-surface: #27272a;
+  --color-border: #3f3f46;
+  --color-text: #fafafa;
+  --color-muted: #a1a1aa;
+  --color-accent: #60a5fa;
+}
+
+html.light {
+  --color-bg: #ffffff;
+  --color-surface: #f8f8f8;
+  --color-border: #e5e5e5;
+  --color-text: #111111;
+  --color-muted: #666666;
+  --color-accent: #2563eb;
 }
 
 /* ── Reset ─────────────────────────────────── */
