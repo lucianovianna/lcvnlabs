@@ -9,15 +9,15 @@ export const en: I18n = {
   },
   hero: {
     title: 'Luciano Vianna',
-    role: 'Full Stack Developer',
-    tagline: 'Turning ideas into digital products — from backend to frontend.',
+    role: 'Senior Software Engineer · Full Stack',
+    tagline: 'Laravel and Vue.js from server to client — focused on PostgreSQL and high-volume critical systems.',
   },
   about: {
     heading: 'About me',
     bio: [
-      'I am a full stack developer with experience building scalable and high-performance web applications.',
-      'I work on both full-time and freelance projects, focused on delivering real business value.',
-      'Passionate about clean code, best practices, and modern tooling.',
+      'Senior Software Engineer with over 5 years of experience in backend development and data modeling, working on critical systems in the Brazilian electric utility sector.',
+      'Specialized in PostgreSQL—execution plan analysis, index creation, and query refactoring—with proven impact: reduced a high-usage management dashboard\'s loading time by 70%. Currently leading a 4-person engineering squad responsible for 3 multitenant internal systems.',
+      'Core stack: Laravel (PHP), Vue.js, PostgreSQL, Redis, AWS, and Docker.',
     ],
   },
   stack: {
@@ -25,8 +25,8 @@ export const en: I18n = {
     categories: {
       frontend: 'Frontend',
       backend: 'Backend',
-      data: 'Data',
-      devops: 'DevOps / Infra',
+      database: 'Database',
+      devops: 'Infra & Cloud',
     },
   },
   projects: {
@@ -44,6 +44,6 @@ export const en: I18n = {
   },
   contact: {
     heading: 'Contact',
-    intro: 'Open to full-time, freelance, and product opportunities.',
+    intro: 'Open to remote opportunities as a senior backend engineer — full-time, contract, or freelance.',
   },
 };

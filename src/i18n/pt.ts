@@ -7,15 +7,15 @@ export const pt = {
   },
   hero: {
     title: 'Luciano Vianna',
-    role: 'Desenvolvedor Full Stack',
-    tagline: 'Transformo ideias em produtos digitais — do backend ao frontend.',
+    role: 'Engenheiro de Software Sênior · Full Stack',
+    tagline: 'Laravel e Vue.js do lado do servidor ao cliente — com foco em PostgreSQL e sistemas críticos de alto volume.',
   },
   about: {
     heading: 'Sobre mim',
     bio: [
-      'Sou desenvolvedor full stack com experiência em construção de aplicações web escaláveis e de alto desempenho.',
-      'Trabalho tanto em projetos CLT quanto freelance, com foco em entregar valor real para o negócio.',
-      'Apaixonado por código limpo, boas práticas e ferramentas modernas.',
+      'Engenheiro de Software Sênior com mais de 5 anos de experiência em backend e modelagem de dados, atuando em sistemas críticos do setor elétrico regulatório.',
+      'Especializado em PostgreSQL — análise de plano de execução, criação de índices e refatoração de queries — com impacto comprovado: reduzi em 70% o tempo de carregamento de um dashboard gerencial de alto uso. Lidero tecnicamente uma squad de 4 pessoas responsável por 3 sistemas internos multitenant.',
+      'Stack principal: Laravel (PHP), Vue.js, PostgreSQL, Redis, AWS e Docker.',
     ],
   },
   stack: {
@@ -23,8 +23,8 @@ export const pt = {
     categories: {
       frontend: 'Frontend',
       backend: 'Backend',
-      data: 'Dados',
-      devops: 'DevOps / Infra',
+      database: 'Banco de dados',
+      devops: 'Infra & Cloud',
     },
   },
   projects: {
@@ -42,7 +42,7 @@ export const pt = {
   },
   contact: {
     heading: 'Contato',
-    intro: 'Aberto a oportunidades CLT, freela e projetos de produto.',
+    intro: 'Aberto a oportunidades remotas como engenheiro backend sênior — CLT, PJ ou freela.',
   },
 };
 
