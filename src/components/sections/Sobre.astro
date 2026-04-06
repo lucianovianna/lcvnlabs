@@ -1,0 +1,28 @@
+---
+import type { I18n } from '../../i18n/pt';
+interface Props { t: I18n }
+const { t } = Astro.props;
+---
+
+<section id="sobre">
+  <div class="container">
+    <div class="fade-in">
+      <h2 data-i18n="about.heading">{t.about.heading}</h2>
+      {t.about.bio.map((p, i) => <p data-i18n={`about.bio.${i}`}>{p}</p>)}
+    </div>
+  </div>
+</section>
+
+<style>
+h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1.25rem;
+}
+
+p {
+  color: var(--color-muted);
+  margin-bottom: 0.75rem;
+  max-width: 640px;
+}
+</style>

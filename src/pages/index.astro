@@ -1,0 +1,177 @@
+---
+import Base from '../layouts/Base.astro';
+import Hero from '../components/sections/Hero.astro';
+import Sobre from '../components/sections/Sobre.astro';
+import Stack from '../components/sections/Stack.astro';
+import Projetos from '../components/sections/Projetos.astro';
+import Contato from '../components/sections/Contato.astro';
+import { Icon } from 'astro-icon/components';
+import { useI18n, pt, en } from '../i18n/index';
+
+// SSG: render com pt-BR por padrão.
+const t = useI18n('pt');
+const translations = { pt, en };
+---
+
+<Base>
+  <header class="site-header">
+    <div class="container header-inner">
+      <span class="logo">lcvnlabs</span>
+      <nav>
+        <a href="#sobre" data-i18n="nav.about">{t.nav.about}</a>
+        <a href="#stack" data-i18n="nav.stack">{t.nav.stack}</a>
+        <a href="#projetos" data-i18n="nav.projects">{t.nav.projects}</a>
+        <a href="#contato" data-i18n="nav.contact">{t.nav.contact}</a>
+      </nav>
+      <button id="theme-toggle" class="icon-toggle" aria-label="Toggle theme">
+        <Icon name="lucide:moon" class="icon-moon" width="16" height="16" />
+        <Icon name="lucide:sun" class="icon-sun" width="16" height="16" />
+      </button>
+      <button id="lang-toggle" class="icon-toggle" aria-label="Toggle language">
+        <Icon name="circle-flags:br" class="flag-pt" width="18" height="18" />
+        <Icon name="circle-flags:gb" class="flag-en" width="18" height="18" />
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <Hero t={t} />
+    <Sobre t={t} />
+    <Stack t={t} />
+    <Projetos t={t} />
+    <Contato t={t} />
+  </main>
+
+  <script is:inline define:vars={{ translations }}>
+    function resolve(obj, path) {
+      return path.split('.').reduce((acc, key) => acc?.[key], obj);
+    }
+    function applyLocale(locale) {
+      const t = translations[locale] || translations['pt'];
+      document.querySelectorAll('[data-i18n]').forEach((el) => {
+        const text = resolve(t, el.dataset.i18n);
+        if (text != null) el.textContent = text;
+      });
+    }
+
+    // Theme toggle — CSS controls icon visibility via html.dark class
+    const themeBtn = document.getElementById('theme-toggle');
+    function applyTheme(theme) {
+      document.documentElement.classList.toggle('dark', theme === 'dark');
+      document.documentElement.classList.toggle('light', theme === 'light');
+    }
+    const savedTheme = localStorage.getItem('theme') ||
+      (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    applyTheme(savedTheme);
+    themeBtn.addEventListener('click', () => {
+      const next = document.documentElement.classList.contains('dark') ? 'light' : 'dark';
+      localStorage.setItem('theme', next);
+      applyTheme(next);
+    });
+
+    // Lang toggle — CSS controls flag visibility via .is-en class on button
+    const langBtn = document.getElementById('lang-toggle');
+    let currentLocale = localStorage.getItem('locale') || 'pt';
+    langBtn.classList.toggle('is-en', currentLocale === 'en');
+    applyLocale(currentLocale);
+    langBtn.addEventListener('click', () => {
+      currentLocale = currentLocale === 'pt' ? 'en' : 'pt';
+      localStorage.setItem('locale', currentLocale);
+      langBtn.classList.toggle('is-en', currentLocale === 'en');
+      applyLocale(currentLocale);
+    });
+  </script>
+
+  <footer class="site-footer">
+    <div class="container">
+      <span>© {new Date().getFullYear()} Luciano Vianna</span>
+    </div>
+  </footer>
+</Base>
+
+<style>
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  backdrop-filter: blur(8px);
+  background: color-mix(in srgb, var(--color-bg) 85%, transparent);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding-block: 1rem;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: -0.01em;
+  margin-right: auto;
+}
+
+nav {
+  display: flex;
+  gap: 1.5rem;
+}
+
+nav a {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--color-muted);
+  transition: color 0.2s;
+}
+
+nav a:hover {
+  color: var(--color-text);
+  text-decoration: none;
+}
+
+.icon-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 0.3rem;
+  color: var(--color-muted);
+  cursor: pointer;
+  transition: color 0.2s, border-color 0.2s;
+  line-height: 0;
+}
+
+.icon-toggle:hover {
+  color: var(--color-text);
+  border-color: var(--color-text);
+}
+
+/* Theme toggle: light → show moon; dark → show sun */
+.icon-sun { display: none; }
+:global(html.dark) .icon-moon { display: none; }
+:global(html.dark) .icon-sun { display: block; }
+
+/* Lang toggle: PT active → show GB flag; EN active → show BR flag */
+#lang-toggle .flag-pt { display: none; }
+#lang-toggle.is-en .flag-en { display: none; }
+#lang-toggle.is-en .flag-pt { display: block; }
+
+main {
+  padding-top: 4rem;
+}
+
+.site-footer {
+  padding-block: 2rem;
+  border-top: 1px solid var(--color-border);
+}
+
+.site-footer .container {
+  font-size: 0.8rem;
+  color: var(--color-muted);
+}
+</style>

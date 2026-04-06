@@ -1,0 +1,61 @@
+---
+import { Icon } from 'astro-icon/components';
+import type { I18n } from '../../i18n/pt';
+interface Props { t: I18n }
+const { t } = Astro.props;
+---
+
+<section id="contato">
+  <div class="container">
+    <div class="fade-in">
+      <h2 data-i18n="contact.heading">{t.contact.heading}</h2>
+      <div class="links">
+        <a href="https://github.com/lucianovianna" target="_blank" rel="noopener">
+          <Icon name="simple-icons:github" width="18" height="18" aria-hidden="true" />
+          GitHub
+        </a>
+        <a href="https://linkedin.com/in/lucianovianna" target="_blank" rel="noopener">
+          <Icon name="simple-icons:linkedin" width="18" height="18" aria-hidden="true" />
+          LinkedIn
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.links {
+  display: flex;
+  gap: 1rem;
+}
+
+.links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 500;
+  font-size: 0.95rem;
+  color: var(--color-muted);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 0.5rem 1rem;
+  transition: color 0.2s, border-color 0.2s;
+  text-decoration: none;
+}
+
+.links a:hover {
+  color: var(--color-text);
+  border-color: var(--color-text);
+  text-decoration: none;
+}
+
+.links a svg {
+  flex-shrink: 0;
+}
+</style>

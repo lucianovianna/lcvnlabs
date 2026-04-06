@@ -1,0 +1,92 @@
+---
+import type { I18n } from '../../i18n/pt';
+interface Props { t: I18n }
+const { t } = Astro.props;
+---
+
+<section id="projetos">
+  <div class="container">
+    <div class="fade-in">
+      <h2 data-i18n="projects.heading">{t.projects.heading}</h2>
+      <div class="grid">
+        {t.projects.items.map((project, i) => (
+          <div class="card">
+            <h3>{project.name}</h3>
+            <p data-i18n={`projects.items.${i}.description`}>{project.description}</p>
+            <div class="tags">
+              {project.stack.map((tag) => <span class="tag">{tag}</span>)}
+            </div>
+            <div class="card-links">
+              {project.repo && (
+                <a href={project.repo} target="_blank" rel="noopener" data-i18n="projects.repo">{t.projects.repo}</a>
+              )}
+              {'demo' in project && project.demo && (
+                <a href={project.demo as string} target="_blank" rel="noopener">{t.projects.demo}</a>
+              )}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.25rem;
+}
+
+.card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+h3 {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+p {
+  font-size: 0.9rem;
+  color: var(--color-muted);
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.tag {
+  font-size: 0.75rem;
+  background: var(--color-border);
+  border-radius: calc(var(--radius) / 2);
+  padding: 0.15rem 0.5rem;
+  color: var(--color-muted);
+}
+
+.card-links {
+  display: flex;
+  gap: 1rem;
+  margin-top: auto;
+  padding-top: 0.5rem;
+}
+
+.card-links a {
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+</style>
