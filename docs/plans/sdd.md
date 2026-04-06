@@ -2,7 +2,7 @@
 
 ## 1. Visão Geral
 
-Site de portfólio pessoal com foco em apresentação profissional como **Desenvolvedor Full Stack**, atraindo oportunidades de emprego CLT, freela e clientes de produto. O site deve transmitir clareza e competência através de um design minimalista.
+Site de portfólio pessoal com foco em apresentação profissional como **Engenheiro de Software Sênior · Full Stack**, atraindo oportunidades remotas de emprego (CLT, PJ, freela). O site transmite clareza e competência através de um design minimalista, com suporte bilíngue (PT/EN) e dark mode.
 
 ---
 
@@ -10,128 +10,176 @@ Site de portfólio pessoal com foco em apresentação profissional como **Desenv
 
 | Camada | Tecnologia |
 |---|---|
-| Framework | [Astro](https://astro.build/) |
-| UI Components | [Naive UI](https://www.naiveui.com/) (via `@astrojs/vue`) |
-| Estilo complementar | CSS nativo / variáveis CSS |
+| Framework | [Astro](https://astro.build/) — SSG (output: static) |
+| Estilo | CSS nativo com variáveis CSS (`src/styles/global.css`) |
+| Interatividade | Scripts inline (`is:inline`) — sem framework JS |
+| Tipografia | Inter (Google Fonts) |
 | Hospedagem | GitHub Pages |
 | CI/CD | GitHub Actions |
-| Domínio | Custom domain via `CNAME` no repositório |
 
-> **Obs.:** Naive UI requer a integração oficial `@astrojs/vue`. Componentes Vue ficam isolados em `.vue` files; o restante do site usa `.astro` puro para máxima performance estática.
-
----
-
-## 3. Estrutura de Páginas
-
-O site é **single page** (sem rotas separadas). A navegação é feita por âncoras (`#sobre`, `#stack`, `#projetos`, `#contato`).
-
-### 3.1 Seções (em ordem)
-
-#### Hero
-- Nome completo
-- Título: "Desenvolvedor Full Stack"
-- Frase curta de posicionamento (tagline)
-- Links rápidos: GitHub e LinkedIn
-- Suporte bilíngue: PT | EN (toggle de idioma)
-
-#### Sobre (`#sobre`)
-- Bio curta (2–3 parágrafos)
-- Foto opcional
-- Conteúdo bilíngue
-
-#### Stack Técnica (`#stack`)
-- Grade visual com tecnologias dominadas
-- Agrupadas por categoria (Frontend, Backend, Dados, DevOps/Infra)
-- Ícones via [Simple Icons](https://simpleicons.org/) ou similar
-
-#### Projetos (`#projetos`)
-- Cards por projeto contendo:
-  - Nome e descrição curta
-  - Stack utilizada (tags)
-  - Link para repositório e/ou demo (quando aplicável)
-- Mínimo 3 projetos no lançamento
-- Conteúdo bilíngue
-
-#### Contato (`#contato`)
-- Links para GitHub e LinkedIn
-- E-mail opcional (pode ser exibido como texto simples ou botão `mailto:`)
+> **Sem Vue, sem Naive UI.** Os únicos dois componentes interativos (toggle de tema e toggle de idioma) são `<button>` nativos com lógica em script inline. Isso elimina ~117 pacotes e mantém o bundle praticamente zero.
 
 ---
 
-## 4. Internacionalização (i18n)
+## 3. Estrutura de Arquivos
 
-- Idiomas: **Português (pt-BR)** e **Inglês (en)**
-- Estratégia: arquivo de strings centralizado (ex: `src/i18n/pt.ts` e `src/i18n/en.ts`)
-- Toggle de idioma no header — sem redirecionamento de rota, apenas troca reativa de conteúdo via estado Vue
-- Idioma padrão: `pt-BR`
+```
+src/
+├── components/
+│   └── sections/
+│       ├── Hero.astro
+│       ├── Sobre.astro
+│       ├── Stack.astro
+│       ├── Projetos.astro
+│       └── Contato.astro
+├── i18n/
+│   ├── index.ts       — useI18n(), exporta pt e en
+│   ├── pt.ts          — strings em português (fonte da verdade de tipos)
+│   └── en.ts          — strings em inglês (tipada via typeof pt)
+├── layouts/
+│   └── Base.astro     — <html>, <head>, meta tags, IIFE de tema, fade-in observer
+├── pages/
+│   └── index.astro    — single page, header, main, footer, script inline de i18n/tema
+└── styles/
+    └── global.css     — variáveis CSS, reset, layout, dark/light mode, fade-in
+```
 
 ---
 
-## 5. Design
+## 4. Single Page — Seções
+
+O site é **single page** (sem rotas separadas). Navegação por âncoras (`#sobre`, `#stack`, `#projetos`, `#contato`).
+
+### Header (fixo)
+- Logo `lcvnlabs`
+- Nav com âncoras (bilíngue via `data-i18n`)
+- `<button id="theme-toggle">` — alterna ☾/☀, persiste em `localStorage`
+- `<button id="lang-toggle">` — alterna PT/EN, persiste em `localStorage`
+
+### Hero
+- Nome: Luciano Vianna
+- Role: "Engenheiro de Software Sênior · Full Stack" / "Senior Software Engineer · Full Stack"
+- Tagline: "Construindo software que você pode confiar." / "Building software you can rely on."
+- Links: GitHub e LinkedIn
+
+### Sobre (`#sobre`)
+- Bio em 3 parágrafos: experiência, especialização em PostgreSQL (impacto de 70%), stack principal
+- Bilíngue
+
+### Stack Técnica (`#stack`)
+- Grade por categoria: Backend, Banco de dados, Frontend, Infra & Cloud
+- Tecnologias atuais: Laravel (PHP), NestJS, Node.js · PostgreSQL, Redis, Supabase · Vue.js, TypeScript, Astro · AWS, Docker, GitHub Actions
+
+### Projetos (`#projetos`)
+- 1 projeto no ar: `lcvnlabs` (este portfólio)
+- Card: nome, descrição, stack (tags), link para repositório
+
+### Contato (`#contato`)
+- Intro de abertura (bilíngue)
+- Links: GitHub e LinkedIn
+
+---
+
+## 5. Internacionalização (i18n)
+
+**Estratégia SSG + script inline:**
+
+1. `index.astro` renderiza com PT por padrão (SSG)
+2. `define:vars={{ translations }}` injeta ambos os objetos de tradução no HTML
+3. Todo elemento traduzível recebe `data-i18n="dot.path.key"` (ex: `data-i18n="about.bio.0"`)
+4. Script inline executa no carregamento: lê `localStorage('locale')`, chama `applyLocale()`
+5. Clique no `#lang-toggle` atualiza `localStorage`, chama `applyLocale()` diretamente
+
+**Arquivos:**
+- `src/i18n/pt.ts` — fonte da verdade; `export type I18n = typeof pt`
+- `src/i18n/en.ts` — tipado via `I18n`, TypeScript garante paridade de chaves
+- `src/i18n/index.ts` — exporta `useI18n(locale)`, `pt`, `en`
+
+---
+
+## 6. Dark Mode
+
+**Estratégia anti-flash:**
+
+1. IIFE em `<head>` (antes de qualquer CSS) lê `localStorage('theme')` e aplica `html.dark` ou `html.light` antes do primeiro paint
+2. `global.css` define vars nas classes `html.dark` e `html.light` (maior especificidade que `@media prefers-color-scheme`)
+3. Fallback automático para preferência do sistema se não houver valor em localStorage
+4. Paleta dark: zinc-900 (`#18181b` base) — suave, sem o preto puro
+
+---
+
+## 7. Design
 
 | Atributo | Decisão |
 |---|---|
 | Estilo | Minimalista / clean |
-| Modo de cor | Light (com suporte a dark mode via preferência do sistema, opcional) |
-| Tipografia | Sans-serif moderna (ex: Inter) |
-| Animações | Sutis — fade-in de seções ao scroll (Intersection Observer) |
-| Responsividade | Mobile-first, breakpoints: `sm`, `md`, `lg` |
+| Modo de cor | Light + Dark (toggle manual + fallback `prefers-color-scheme`) |
+| Paleta dark | Zinc-900: bg `#18181b`, surface `#27272a`, text `#fafafa`, accent `#60a5fa` |
+| Tipografia | Inter (Google Fonts) |
+| Animações | Fade-in ao scroll via Intersection Observer (`.fade-in` → `.fade-in.visible`) |
+| Responsividade | Mobile-first, max-width 900px, padding inline |
+| Largura máxima | `--max-width: 900px` via variável CSS |
 
 ---
 
-## 6. Repositório
+## 8. Repositório
 
 | Atributo | Decisão |
 |---|---|
 | Nome | `lcvnlabs` |
+| Branch principal | `main` |
+| Branch de trabalho | `develop` |
 | Visibilidade | Público (exigido pelo GitHub Pages gratuito) |
-| Licença | MIT (código) |
-| Conteúdo | Textos, design e projetos com copyright reservado — nota no README |
+| Licença | MIT (código) — conteúdo com copyright reservado |
 
-> **Obs.:** O nome `lcvnlabs` alinha repositório e domínio. Enquanto o domínio customizado não estiver apontado, configurar `base: '/lcvnlabs'` no `astro.config.mjs` (remover depois).
+> `base: '/lcvnlabs'` em `astro.config.mjs` enquanto domínio customizado não estiver apontado.
 
 ---
 
-## 7. CI/CD e Deploy
+## 9. CI/CD e Deploy
 
 ```
-main branch → GitHub Actions → build Astro → deploy para gh-pages branch
+develop → PR → main → GitHub Actions → astro build → deploy para gh-pages
 ```
 
-- Build command: `astro build`
-- Output dir: `dist/`
-- Domínio custom: configurar `CNAME` com o domínio adquirido
+- Build: `astro build` → output `dist/`
 - HTTPS: habilitado automaticamente pelo GitHub Pages
+- Domínio custom: pendente (`CNAME` a configurar)
 
 ---
 
-## 8. Requisitos Não-Funcionais
+## 10. Requisitos Não-Funcionais
 
 - Lighthouse score alvo: **≥ 90** em Performance, Acessibilidade e SEO
-- Meta tags básicas de SEO (`title`, `description`, `og:*`)
-- Sem dependências de backend ou banco de dados
-- Tempo de carregamento inicial: < 2s em conexão 4G
+- Meta tags: `title`, `description`, `og:title`, `og:description`, `og:type`
+- Zero dependências de backend ou banco de dados
+- Bundle JS mínimo — sem framework JS no cliente
 
 ---
 
-## 9. Fora de Escopo (v1)
+## 11. Fora de Escopo (v1)
 
 - Blog / artigos
 - Formulário de contato com backend
-- Autenticação
 - CMS
-- Analytics (pode ser adicionado depois com Plausible ou similar)
+- Analytics (Plausible ou similar — pós-lançamento)
+- Foto na seção Sobre
 
 ---
 
-## 10. Próximos Passos
+## 12. Status e Próximos Passos
 
-- [x] Criar repositório público `lcvnlabs` no GitHub com licença MIT
-- [ ] Adicionar nota de copyright no README separando código do conteúdo
-- [ ] Inicializar projeto com `npm create astro@latest`
-- [ ] Adicionar integração Vue: `npx astro add vue`
-- [ ] Instalar Naive UI: `npm install naive-ui`
-- [ ] Configurar GitHub Actions para deploy automático
-- [ ] Apontar domínio customizado para GitHub Pages
-- [ ] Implementar seções na ordem definida
-- [ ] Revisar conteúdo bilíngue antes de publicar
+### Concluído
+- [x] Repositório público com licença MIT
+- [x] GitHub Actions para deploy automático
+- [x] Single page com 5 seções
+- [x] Suporte bilíngue PT/EN via `data-i18n` + script inline
+- [x] Dark mode com toggle manual e persistência em `localStorage`
+- [x] Conteúdo alinhado ao perfil real (bio, stack, tagline)
+- [x] Remoção de Vue/Naive UI — stack simplificada para Astro puro
+
+### Pendente
+- [ ] Apontar domínio customizado para GitHub Pages e remover `base: '/lcvnlabs'`
+- [ ] Adicionar projetos reais além do portfólio
+- [ ] Foto na seção Sobre (opcional)
+- [ ] Testes de Lighthouse pós-deploy
