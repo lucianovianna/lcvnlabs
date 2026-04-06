@@ -42,7 +42,6 @@ export const pt = {
   },
   contact: {
     heading: 'Contato',
-    intro: 'Aberto a oportunidades remotas como engenheiro backend sênior — CLT, PJ ou freela.',
   },
 };
 

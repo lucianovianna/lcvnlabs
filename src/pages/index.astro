@@ -5,6 +5,7 @@ import Sobre from '../components/sections/Sobre.astro';
 import Stack from '../components/sections/Stack.astro';
 import Projetos from '../components/sections/Projetos.astro';
 import Contato from '../components/sections/Contato.astro';
+import { Icon } from 'astro-icon/components';
 import { useI18n, pt, en } from '../i18n/index';
 
 // SSG: render com pt-BR por padrão.
@@ -22,8 +23,14 @@ const translations = { pt, en };
         <a href="#projetos" data-i18n="nav.projects">{t.nav.projects}</a>
         <a href="#contato" data-i18n="nav.contact">{t.nav.contact}</a>
       </nav>
-      <button id="theme-toggle" class="icon-toggle" aria-label="Toggle theme">☾</button>
-      <button id="lang-toggle" class="icon-toggle" aria-label="Toggle language">EN</button>
+      <button id="theme-toggle" class="icon-toggle" aria-label="Toggle theme">
+        <Icon name="lucide:moon" class="icon-moon" width="16" height="16" />
+        <Icon name="lucide:sun" class="icon-sun" width="16" height="16" />
+      </button>
+      <button id="lang-toggle" class="icon-toggle" aria-label="Toggle language">
+        <Icon name="circle-flags:br" class="flag-pt" width="18" height="18" />
+        <Icon name="circle-flags:gb" class="flag-en" width="18" height="18" />
+      </button>
     </div>
   </header>
 
@@ -47,12 +54,11 @@ const translations = { pt, en };
       });
     }
 
-    // Theme toggle
+    // Theme toggle — CSS controls icon visibility via html.dark class
     const themeBtn = document.getElementById('theme-toggle');
     function applyTheme(theme) {
       document.documentElement.classList.toggle('dark', theme === 'dark');
       document.documentElement.classList.toggle('light', theme === 'light');
-      themeBtn.textContent = theme === 'dark' ? '☀' : '☾';
     }
     const savedTheme = localStorage.getItem('theme') ||
       (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
@@ -63,15 +69,15 @@ const translations = { pt, en };
       applyTheme(next);
     });
 
-    // Lang toggle
+    // Lang toggle — CSS controls flag visibility via .is-en class on button
     const langBtn = document.getElementById('lang-toggle');
-    let currentLocale = (typeof localStorage !== 'undefined' && localStorage.getItem('locale')) || 'pt';
-    langBtn.textContent = currentLocale === 'pt' ? 'EN' : 'PT';
+    let currentLocale = localStorage.getItem('locale') || 'pt';
+    langBtn.classList.toggle('is-en', currentLocale === 'en');
     applyLocale(currentLocale);
     langBtn.addEventListener('click', () => {
       currentLocale = currentLocale === 'pt' ? 'en' : 'pt';
       localStorage.setItem('locale', currentLocale);
-      langBtn.textContent = currentLocale === 'pt' ? 'EN' : 'PT';
+      langBtn.classList.toggle('is-en', currentLocale === 'en');
       applyLocale(currentLocale);
     });
   </script>
@@ -127,23 +133,33 @@ nav a:hover {
 }
 
 .icon-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   background: none;
   border: 1px solid var(--color-border);
   border-radius: var(--radius);
-  padding: 0.25rem 0.6rem;
-  font-size: 0.85rem;
-  font-weight: 600;
+  padding: 0.3rem;
   color: var(--color-muted);
   cursor: pointer;
   transition: color 0.2s, border-color 0.2s;
-  line-height: 1;
-  letter-spacing: 0.05em;
+  line-height: 0;
 }
 
 .icon-toggle:hover {
   color: var(--color-text);
   border-color: var(--color-text);
 }
+
+/* Theme toggle: light → show moon; dark → show sun */
+.icon-sun { display: none; }
+:global(html.dark) .icon-moon { display: none; }
+:global(html.dark) .icon-sun { display: block; }
+
+/* Lang toggle: PT active → show GB flag; EN active → show BR flag */
+#lang-toggle .flag-pt { display: none; }
+#lang-toggle.is-en .flag-en { display: none; }
+#lang-toggle.is-en .flag-pt { display: block; }
 
 main {
   padding-top: 4rem;

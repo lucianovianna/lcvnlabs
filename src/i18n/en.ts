@@ -44,6 +44,5 @@ export const en: I18n = {
   },
   contact: {
     heading: 'Contact',
-    intro: 'Open to remote opportunities as a senior backend engineer — full-time, contract, or freelance.',
   },
 };
