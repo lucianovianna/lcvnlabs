@@ -34,8 +34,8 @@ export const pt = {
     items: [
       {
         name: 'lcvnlabs',
-        description: 'Este portfólio — desenvolvido com Astro, Vue e Naive UI.',
-        stack: ['Astro', 'Vue', 'Naive UI'],
+        description: 'Este portfólio — desenvolvido com Astro e TypeScript.',
+        stack: ['Astro', 'TypeScript'],
         repo: 'https://github.com/lucianovianna/lcvnlabs',
       },
     ],

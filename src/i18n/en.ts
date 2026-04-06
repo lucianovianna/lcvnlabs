@@ -36,8 +36,8 @@ export const en: I18n = {
     items: [
       {
         name: 'lcvnlabs',
-        description: 'This portfolio — built with Astro, Vue, and Naive UI.',
-        stack: ['Astro', 'Vue', 'Naive UI'],
+        description: 'This portfolio — built with Astro and TypeScript.',
+        stack: ['Astro', 'TypeScript'],
         repo: 'https://github.com/lucianovianna/lcvnlabs',
       },
     ],
