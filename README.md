@@ -1,13 +1,12 @@
 # lcvnlabs
 
-Personal portfolio site for [Luciano Vianna](https://github.com/lucianovianna), built with Astro, Vue and Naive UI.
+Personal portfolio site for [Luciano Vianna](https://github.com/lucianovianna), built with Astro.
 
 ## Stack
 
-- [Astro](https://astro.build/) — static site framework
-- [Vue 3](https://vuejs.org/) — reactive components (language toggle)
-- [Naive UI](https://www.naiveui.com/) — Vue component library
-- Hosted on GitHub Pages, deployed via GitHub Actions
+- [Astro](https://astro.build/) — static site generator (output: static)
+- [astro-icon](https://github.com/natemoo-re/astro-icon) — icon integration (Lucide, Simple Icons, Circle Flags)
+- Hosted at [lcvnlabs.com.br](https://lcvnlabs.com.br), deployed via GitHub Actions
 
 ## Development
 
