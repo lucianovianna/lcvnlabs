@@ -1,4 +1,14 @@
 export const pt = {
+  ui: {
+    navigation: 'Navegação principal',
+    menu: 'Menu',
+    skip: 'Pular para o conteúdo',
+    home: 'lcvnlabs — início',
+    light: 'Ativar tema claro',
+    dark: 'Ativar tema escuro',
+    language: 'Switch to English',
+    top: 'Voltar ao topo',
+  },
   nav: {
     about: 'Sobre',
     stack: 'Stack',

@@ -1,6 +1,16 @@
 import type { I18n } from './pt';
 
 export const en: I18n = {
+  ui: {
+    navigation: 'Main navigation',
+    menu: 'Menu',
+    skip: 'Skip to content',
+    home: 'lcvnlabs — home',
+    light: 'Switch to light theme',
+    dark: 'Switch to dark theme',
+    language: 'Mudar para português',
+    top: 'Back to top',
+  },
   nav: {
     about: 'About',
     stack: 'Stack',

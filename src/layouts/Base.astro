@@ -17,9 +17,10 @@ const {
   <head>
     <script is:inline>
       (function () {
-        const saved = localStorage.getItem('theme');
+        let saved;
+        try { saved = localStorage.getItem('theme'); } catch {}
         const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-        const theme = saved ?? (prefersDark ? 'dark' : 'light');
+        const theme = saved === 'light' || saved === 'dark' ? saved : (prefersDark ? 'dark' : 'light');
         document.documentElement.classList.add(theme);
       })();
     </script>
@@ -33,26 +34,12 @@ const {
     <meta property="og:type" content="website" />
 
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <title>{title}</title>
   </head>
   <body>
     <slot />
-    <script>
-      // Fade-in on scroll via Intersection Observer
-      const observer = new IntersectionObserver(
-        (entries) => {
-          for (const entry of entries) {
-            if (entry.isIntersecting) {
-              entry.target.classList.add('visible');
-              observer.unobserve(entry.target);
-            }
-          }
-        },
-        { threshold: 0.1 }
-      );
-
-      document.querySelectorAll('.fade-in').forEach((el) => observer.observe(el));
-    </script>
   </body>
 </html>
 
