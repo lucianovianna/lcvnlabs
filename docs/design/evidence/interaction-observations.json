@@ -1,0 +1,78 @@
+{
+  "checks": [
+    {
+      "id": "desktop-keyboard",
+      "steps": [
+        "Tab to skip link; Enter focuses main",
+        "Reload; Tab from skip through the next 13 links/buttons without wrapping outside the page",
+        "Check visible outlines, 44px heights, viewport bounds and no sticky-header occlusion"
+      ],
+      "observed": "[{\"tag\":\"A\",\"label\":\"lcvnlabs — início\",\"href\":\"#topo\",\"x\":180,\"y\":14,\"w\":117.46875,\"h\":44,\"outline\":\"3px\",\"inHeader\":true},{\"tag\":\"A\",\"label\":\"Sobre\",\"href\":\"#sobre\",\"x\":888.109375,\"y\":14,\"w\":38.390625,\"h\":44,\"outline\":\"3px\",\"inHeader\":true},{\"tag\":\"A\",\"label\":\"Projetos\",\"href\":\"#projetos\",\"x\":950.5,\"y\":14,\"w\":53.375,\"h\":44,\"outline\":\"3px\",\"inHeader\":true},{\"tag\":\"A\",\"label\":\"Stack\",\"href\":\"#stack\",\"x\":1027.875,\"y\":14,\"w\":36.640625,\"h\":44,\"outline\":\"3px\",\"inHeader\":true},{\"tag\":\"A\",\"label\":\"Contato\",\"href\":\"#contato\",\"x\":1088.515625,\"y\":14,\"w\":51.484375,\"h\":44,\"outline\":\"3px\",\"inHeader\":true},{\"tag\":\"BUTTON\",\"label\":\"Ativar tema escuro\",\"href\":null,\"x\":1164,\"y\":14,\"w\":44,\"h\":44,\"outline\":\"3px\",\"inHeader\":true},{\"tag\":\"BUTTON\",\"label\":\"Switch to English\",\"href\":null,\"x\":1216,\"y\":14,\"w\":44,\"h\":44,\"outline\":\"3px\",\"inHeader\":true},{\"tag\":\"A\",\"label\":\"Ver projetos\",\"href\":\"#projetos\",\"x\":180,\"y\":384.1875,\"w\":153.90625,\"h\":49.765625,\"outline\":\"3px\",\"inHeader\":false},{\"tag\":\"A\",\"label\":\"LinkedIn\",\"href\":\"https://www.linkedin.com/in/lucianocvn\",\"x\":357.90625,\"y\":387.0625,\"w\":84.859375,\"h\":44,\"outline\":\"3px\",\"inHeader\":false},{\"tag\":\"A\",\"label\":\"Ver repositório de lcvnlabs no GitHub\",\"href\":\"https://github.com/lucianovianna/lcvnlabs\",\"x\":1154.8125,\"y\":476.171875,\"w\":105.171875,\"h\":44,\"outline\":\"3px\",\"inHeader\":false},{\"tag\":\"A\",\"label\":\"Conversar no LinkedIn\",\"href\":\"https://www.linkedin.com/in/lucianocvn\",\"x\":907.53125,\"y\":671.484375,\"w\":226.28125,\"h\":49.765625,\"outline\":\"3px\",\"inHeader\":false},{\"tag\":\"A\",\"label\":\"GitHub\",\"href\":\"https://github.com/lucianovianna\",\"x\":1153.8125,\"y\":674.359375,\"w\":74.1875,\"h\":44,\"outline\":\"3px\",\"inHeader\":false},{\"tag\":\"A\",\"label\":\"Voltar ao topo\",\"href\":\"#topo\",\"x\":1156.578125,\"y\":840.40625,\"w\":103.421875,\"h\":44,\"outline\":\"3px\",\"inHeader\":false}]",
+      "artifact": "keyboard-desktop.png"
+    },
+    {
+      "id": "mobile-keyboard",
+      "steps": [
+        "Enter opens summary",
+        "Tab to About; Enter navigates and closes menu",
+        "Space opens; Escape closes and returns focus",
+        "Outside click closes; switching to desktop closes"
+      ],
+      "observed": "About title top 140, header bottom 73",
+      "artifact": "mobile-menu.png"
+    },
+    {
+      "id": "touch-and-persistence",
+      "steps": [
+        "Synthesized Chromium touch opens menu",
+        "Touch Projects closes menu and navigates",
+        "Touch language and theme",
+        "Reload retains EN/dark"
+      ],
+      "observed": "Emulated touch, not physical hardware.",
+      "artifact": "touch-dark-en.png"
+    },
+    {
+      "id": "reduced-motion",
+      "steps": [
+        "Emulate reduce",
+        "Reload",
+        "Read effective scroll, transition and animation styles"
+      ],
+      "observed": "{\"scroll\":\"auto\",\"transition\":\"0s\",\"animation\":\"none\"}",
+      "artifact": "reduced-motion.png"
+    },
+    {
+      "id": "blocked-storage",
+      "steps": [
+        "Make localStorage getter throw",
+        "Reload and use both toggles",
+        "Change OS color preference after manual selection"
+      ],
+      "observed": "Controls work without storage; manual theme survives OS changes in the current page.",
+      "artifact": "blocked-storage.png"
+    },
+    {
+      "id": "preference-recovery",
+      "steps": [
+        "Invalid stored theme/locale fall back to system/PT",
+        "Clear storage",
+        "OS color change follows system without manual override"
+      ],
+      "observed": "Invalid values recovered; system theme changes honored.",
+      "artifact": "system-theme.png"
+    },
+    {
+      "id": "no-javascript",
+      "steps": [
+        "Disable scripts and reload",
+        "Confirm five sections remain visible",
+        "Confirm nonfunctional preference controls stay hidden",
+        "Open native navigation disclosure"
+      ],
+      "observed": "Content, links and native menu work without scripts.",
+      "artifact": "no-javascript.png"
+    }
+  ],
+  "runtimeErrors": []
+}

@@ -1,5 +1,6 @@
 ---
 import Base from '../layouts/Base.astro';
+import BrandMark from '../components/BrandMark.astro';
 import Hero from '../components/sections/Hero.astro';
 import Sobre from '../components/sections/Sobre.astro';
 import Stack from '../components/sections/Stack.astro';
@@ -8,170 +9,174 @@ import Contato from '../components/sections/Contato.astro';
 import { Icon } from 'astro-icon/components';
 import { useI18n, pt, en } from '../i18n/index';
 
-// SSG: render com pt-BR por padrão.
 const t = useI18n('pt');
 const translations = { pt, en };
+const links = [
+  { id: 'sobre', key: 'about' },
+  { id: 'projetos', key: 'projects' },
+  { id: 'stack', key: 'stack' },
+  { id: 'contato', key: 'contact' },
+] as const;
 ---
 
-<Base>
+<Base title={t.ui.title} description={t.ui.description}>
+  <a class="skip-link" href="#conteudo" data-i18n="ui.skip">{t.ui.skip}</a>
   <header class="site-header">
     <div class="container header-inner">
-      <span class="logo">lcvnlabs</span>
-      <nav>
-        <a href="#sobre" data-i18n="nav.about">{t.nav.about}</a>
-        <a href="#stack" data-i18n="nav.stack">{t.nav.stack}</a>
-        <a href="#projetos" data-i18n="nav.projects">{t.nav.projects}</a>
-        <a href="#contato" data-i18n="nav.contact">{t.nav.contact}</a>
+      <a class="brand" href="#topo" aria-label={t.ui.home} data-i18n-aria="ui.home">
+        <BrandMark />
+        <span>lcvnlabs</span>
+      </a>
+      <nav class="desktop-nav" aria-label={t.ui.navigation} data-i18n-aria="ui.navigation">
+        {links.map(({ id, key }) => <a href={`#${id}`} data-i18n={`nav.${key}`}>{t.nav[key]}</a>)}
       </nav>
-      <button id="theme-toggle" class="icon-toggle" aria-label="Toggle theme">
-        <Icon name="lucide:moon" class="icon-moon" width="16" height="16" />
-        <Icon name="lucide:sun" class="icon-sun" width="16" height="16" />
-      </button>
-      <button id="lang-toggle" class="icon-toggle" aria-label="Toggle language">
-        <Icon name="circle-flags:br" class="flag-pt" width="18" height="18" />
-        <Icon name="circle-flags:gb" class="flag-en" width="18" height="18" />
-      </button>
+      <div class="preferences">
+        <button id="theme-toggle" class="icon-toggle" aria-label={t.ui.dark} hidden>
+          <Icon name="lucide:moon" class="icon-moon" width="18" height="18" aria-hidden="true" />
+          <Icon name="lucide:sun" class="icon-sun" width="18" height="18" aria-hidden="true" />
+        </button>
+        <button id="lang-toggle" class="icon-toggle language-toggle" aria-label={t.ui.language} lang="en" hidden>EN</button>
+      </div>
+      <details class="mobile-menu">
+        <summary><Icon name="lucide:menu" width="20" height="20" aria-hidden="true" /><span class="sr-only" data-i18n="ui.menu">{t.ui.menu}</span></summary>
+        <nav aria-label={t.ui.navigation} data-i18n-aria="ui.navigation">
+          {links.map(({ id, key }) => <a href={`#${id}`} data-i18n={`nav.${key}`}>{t.nav[key]}</a>)}
+        </nav>
+      </details>
     </div>
   </header>
 
-  <main>
+  <main id="conteudo" tabindex="-1">
     <Hero t={t} />
     <Sobre t={t} />
-    <Stack t={t} />
     <Projetos t={t} />
+    <Stack t={t} />
     <Contato t={t} />
   </main>
 
-  <script is:inline define:vars={{ translations }}>
-    function resolve(obj, path) {
-      return path.split('.').reduce((acc, key) => acc?.[key], obj);
-    }
-    function applyLocale(locale) {
-      const t = translations[locale] || translations['pt'];
-      document.querySelectorAll('[data-i18n]').forEach((el) => {
-        const text = resolve(t, el.dataset.i18n);
-        if (text != null) el.textContent = text;
-      });
-    }
-
-    // Theme toggle — CSS controls icon visibility via html.dark class
-    const themeBtn = document.getElementById('theme-toggle');
-    function applyTheme(theme) {
-      document.documentElement.classList.toggle('dark', theme === 'dark');
-      document.documentElement.classList.toggle('light', theme === 'light');
-    }
-    const savedTheme = localStorage.getItem('theme') ||
-      (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-    applyTheme(savedTheme);
-    themeBtn.addEventListener('click', () => {
-      const next = document.documentElement.classList.contains('dark') ? 'light' : 'dark';
-      localStorage.setItem('theme', next);
-      applyTheme(next);
-    });
-
-    // Lang toggle — CSS controls flag visibility via .is-en class on button
-    const langBtn = document.getElementById('lang-toggle');
-    let currentLocale = localStorage.getItem('locale') || 'pt';
-    langBtn.classList.toggle('is-en', currentLocale === 'en');
-    applyLocale(currentLocale);
-    langBtn.addEventListener('click', () => {
-      currentLocale = currentLocale === 'pt' ? 'en' : 'pt';
-      localStorage.setItem('locale', currentLocale);
-      langBtn.classList.toggle('is-en', currentLocale === 'en');
-      applyLocale(currentLocale);
-    });
-  </script>
-
   <footer class="site-footer">
-    <div class="container">
+    <div class="container footer-inner">
       <span>© {new Date().getFullYear()} Luciano Vianna</span>
+      <a class="text-link" href="#topo"><span data-i18n="ui.top">{t.ui.top}</span><Icon name="lucide:arrow-up" width="16" height="16" aria-hidden="true" /></a>
     </div>
   </footer>
+
+  <script is:inline define:vars={{ translations }}>
+    const readPreference = (key) => { try { return localStorage.getItem(key); } catch { return null; } };
+    const savePreference = (key, value) => { try { localStorage.setItem(key, value); } catch {} };
+    const resolve = (obj, path) => path.split('.').reduce((acc, key) => acc?.[key], obj);
+    const themeBtn = document.getElementById('theme-toggle');
+    const langBtn = document.getElementById('lang-toggle');
+    const menu = document.querySelector('.mobile-menu');
+    let currentLocale = readPreference('locale') === 'en' ? 'en' : 'pt';
+    const systemTheme = window.matchMedia('(prefers-color-scheme: dark)');
+    const savedTheme = readPreference('theme');
+    let currentTheme = savedTheme === 'dark' || savedTheme === 'light' ? savedTheme : (systemTheme.matches ? 'dark' : 'light');
+    let manualTheme = savedTheme === 'dark' || savedTheme === 'light';
+
+    function updateControls() {
+      const t = translations[currentLocale];
+      themeBtn.setAttribute('aria-label', currentTheme === 'dark' ? t.ui.light : t.ui.dark);
+      langBtn.textContent = currentLocale === 'pt' ? 'EN' : 'PT';
+      langBtn.lang = currentLocale === 'pt' ? 'en' : 'pt-BR';
+      langBtn.setAttribute('aria-label', t.ui.language);
+    }
+    function applyTheme(theme) {
+      currentTheme = theme;
+      document.documentElement.classList.toggle('dark', theme === 'dark');
+      document.documentElement.classList.toggle('light', theme === 'light');
+      updateControls();
+    }
+    function applyLocale(locale) {
+      const t = translations[locale];
+      document.documentElement.lang = locale === 'pt' ? 'pt-BR' : 'en';
+      document.title = t.ui.title;
+      document.querySelector('meta[name="description"]').setAttribute('content', t.ui.description);
+      document.querySelector('meta[property="og:title"]').setAttribute('content', t.ui.title);
+      document.querySelector('meta[property="og:description"]').setAttribute('content', t.ui.description);
+      document.querySelectorAll('[data-i18n]').forEach((el) => {
+        const value = resolve(t, el.dataset.i18n);
+        if (typeof value === 'string') el.textContent = value;
+      });
+      document.querySelectorAll('[data-i18n-aria]').forEach((el) => {
+        const value = resolve(t, el.dataset.i18nAria);
+        if (typeof value === 'string') el.setAttribute('aria-label', value);
+      });
+      updateControls();
+    }
+    applyTheme(currentTheme);
+    applyLocale(currentLocale);
+    themeBtn.hidden = false;
+    langBtn.hidden = false;
+    themeBtn.addEventListener('click', () => {
+      manualTheme = true;
+      applyTheme(currentTheme === 'dark' ? 'light' : 'dark');
+      savePreference('theme', currentTheme);
+    });
+    langBtn.addEventListener('click', () => {
+      currentLocale = currentLocale === 'pt' ? 'en' : 'pt';
+      applyLocale(currentLocale);
+      savePreference('locale', currentLocale);
+    });
+    systemTheme.addEventListener('change', (event) => {
+      if (!manualTheme) applyTheme(event.matches ? 'dark' : 'light');
+    });
+    menu.querySelectorAll('a').forEach((link) => link.addEventListener('click', () => { menu.open = false; }));
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && menu.open) {
+        menu.open = false;
+        menu.querySelector('summary').focus();
+      }
+    });
+    document.addEventListener('click', (event) => {
+      if (menu.open && !menu.contains(event.target)) menu.open = false;
+    });
+    window.matchMedia('(min-width: 768px)').addEventListener('change', (event) => {
+      if (event.matches) menu.open = false;
+    });
+  </script>
 </Base>
 
 <style>
-.site-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 100;
-  backdrop-filter: blur(8px);
-  background: color-mix(in srgb, var(--color-bg) 85%, transparent);
-  border-bottom: 1px solid var(--color-border);
-}
-
-.header-inner {
-  display: flex;
-  align-items: center;
-  gap: 2rem;
-  padding-block: 1rem;
-}
-
-.logo {
-  font-weight: 700;
-  font-size: 1rem;
-  letter-spacing: -0.01em;
-  margin-right: auto;
-}
-
-nav {
-  display: flex;
-  gap: 1.5rem;
-}
-
-nav a {
-  font-size: 0.875rem;
-  font-weight: 500;
-  color: var(--color-muted);
-  transition: color 0.2s;
-}
-
-nav a:hover {
-  color: var(--color-text);
-  text-decoration: none;
-}
-
-.icon-toggle {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  background: none;
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius);
-  padding: 0.3rem;
-  color: var(--color-muted);
-  cursor: pointer;
-  transition: color 0.2s, border-color 0.2s;
-  line-height: 0;
-}
-
-.icon-toggle:hover {
-  color: var(--color-text);
-  border-color: var(--color-text);
-}
-
-/* Theme toggle: light → show moon; dark → show sun */
+.site-header { position: sticky; top: 0; z-index: 10; background: var(--color-bg); border-bottom: 1px solid var(--color-border); }
+.header-inner { display: flex; align-items: center; gap: 1.5rem; min-height: 72px; position: relative; }
+.brand { display: inline-flex; align-items: center; gap: 0.7rem; min-height: 44px; margin-right: auto; color: var(--color-accent); flex-shrink: 0; }
+.brand span { color: var(--color-text); font-weight: 600; font-size: 1.25rem; letter-spacing: -0.04em; }
+.brand:hover { text-decoration: none; }
+.desktop-nav { display: flex; gap: 1.5rem; }
+nav a { display: inline-flex; align-items: center; min-height: 44px; color: var(--color-muted); font-size: 0.85rem; font-weight: 500; }
+nav a:hover { color: var(--color-accent); }
+.preferences { display: flex; align-items: center; gap: 0.5rem; }
+.icon-toggle { display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; border: 1px solid var(--color-border); border-radius: var(--radius); background: var(--color-surface); color: var(--color-text); cursor: pointer; }
+.icon-toggle[hidden] { display: none; }
+.icon-toggle:hover { border-color: var(--color-accent); }
+.language-toggle { font-size: 0.8rem; font-weight: 600; }
 .icon-sun { display: none; }
 :global(html.dark) .icon-moon { display: none; }
 :global(html.dark) .icon-sun { display: block; }
-
-/* Lang toggle: PT active → show GB flag; EN active → show BR flag */
-#lang-toggle .flag-pt { display: none; }
-#lang-toggle.is-en .flag-en { display: none; }
-#lang-toggle.is-en .flag-pt { display: block; }
-
-main {
-  padding-top: 4rem;
+.mobile-menu { display: none; }
+.site-footer { border-top: 1px solid var(--color-border); padding-block: 1rem; }
+.footer-inner { display: flex; justify-content: space-between; align-items: center; gap: 1rem; color: var(--color-muted); font-size: 0.75rem; }
+.footer-inner .text-link { font-size: 0.75rem; font-weight: 400; }
+.skip-link { position: fixed; top: 0.5rem; left: 0.5rem; z-index: 30; padding: 0.75rem 1rem; background: var(--color-surface); border: 1px solid var(--color-accent); border-radius: var(--radius); transform: translateY(-160%); }
+.skip-link:focus { transform: none; }
+@media (max-width: 767px) {
+  .header-inner { min-height: 72px; gap: 0.5rem; }
+  .desktop-nav { display: none; }
+  .brand { gap: 0.4rem; }
+  .brand span { font-size: 1.1rem; }
+  .preferences { gap: 0.35rem; }
+  .mobile-menu { display: block; }
+  summary { list-style: none; display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; cursor: pointer; color: var(--color-text); border: 1px solid var(--color-border); border-radius: var(--radius); }
+  summary::-webkit-details-marker { display: none; }
+  .mobile-menu[open] summary { color: var(--color-accent); border-color: var(--color-accent); }
+  .mobile-menu nav { position: absolute; top: calc(100% + 1px); left: 0; right: 0; display: flex; flex-direction: column; padding: 0.5rem 1rem; background: var(--color-surface); border: 1px solid var(--color-border); border-radius: 0 0 var(--radius) var(--radius); }
+  .mobile-menu nav a { padding: 0.3rem 0.5rem; min-height: 48px; }
 }
-
-.site-footer {
-  padding-block: 2rem;
-  border-top: 1px solid var(--color-border);
-}
-
-.site-footer .container {
-  font-size: 0.8rem;
-  color: var(--color-muted);
+@media (max-width: 359px) {
+  .brand span { font-size: 1rem; }
+  .brand :global(svg) { width: 26px; height: 26px; }
+  .header-inner { gap: 0.3rem; }
+  .preferences { gap: 0.25rem; }
 }
 </style>
