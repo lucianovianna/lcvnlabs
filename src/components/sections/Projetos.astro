@@ -14,8 +14,7 @@ const { t } = Astro.props;
         <div>
           <p class="context" data-i18n="projects.case.context">{t.projects.case.context}</p>
           <h3 id="case-heading" data-i18n="projects.case.title">{t.projects.case.title}</h3>
-          <p class="description" data-i18n="projects.case.challenge">{t.projects.case.challenge}</p>
-          <p class="contribution"><strong data-i18n="projects.case.contributionLabel">{t.projects.case.contributionLabel}</strong><span data-i18n="projects.case.contribution">{t.projects.case.contribution}</span></p>
+          <p class="description" data-i18n="projects.case.description">{t.projects.case.description}</p>
           <div class="tags"><span class="tag">PostgreSQL</span><span class="tag">Backend</span></div>
         </div>
         <div class="case-result"><strong data-i18n="projects.case.result">{t.projects.case.result}</strong><span data-i18n="projects.case.resultLabel">{t.projects.case.resultLabel}</span></div>
@@ -43,8 +42,6 @@ const { t } = Astro.props;
 h3 { font-size: 1.5rem; margin-top: 0.3rem; }
 .context { font-size: 0.75rem; color: var(--color-muted); }
 .description { font-size: 0.95rem; color: var(--color-muted); margin-top: 0.5rem; }
-.contribution { margin-top: 0.8rem; font-size: 0.85rem; color: var(--color-muted); }
-.contribution strong { display: block; color: var(--color-text); font-weight: 500; margin-bottom: 0.2rem; }
 .tags { margin-top: 0.85rem; }
 .case-result { border-left: 1px solid var(--color-border); padding: 1rem 0 1rem 2rem; }
 .case-result strong { display: block; font-size: 2.25rem; font-weight: 700; line-height: 1.2; color: var(--color-accent); letter-spacing: -0.04em; font-variant-numeric: tabular-nums; }

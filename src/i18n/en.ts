@@ -45,9 +45,7 @@ export const en: I18n = {
     case: {
       context: 'Professional experience · internal system',
       title: 'PostgreSQL performance',
-      challenge: 'Improve the response time of a high-usage management dashboard.',
-      contribution: 'Execution plan analysis, index creation and query refactoring.',
-      contributionLabel: 'My contribution',
+      description: 'To speed up a high-usage management dashboard, I analyzed execution plans, created indexes and refactored queries.',
       result: '-70%',
       resultLabel: 'in loading time',
     },

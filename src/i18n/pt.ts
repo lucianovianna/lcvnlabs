@@ -43,9 +43,7 @@ export const pt = {
     case: {
       context: 'Experiência profissional · sistema interno',
       title: 'Performance em PostgreSQL',
-      challenge: 'Melhorar o tempo de resposta de um dashboard gerencial de alto uso.',
-      contribution: 'Análise de planos de execução, criação de índices e refatoração de queries.',
-      contributionLabel: 'Minha contribuição',
+      description: 'Para acelerar um dashboard gerencial de alto uso, analisei planos de execução, criei índices e refatorei queries.',
       result: '-70%',
       resultLabel: 'no tempo de carregamento',
     },
