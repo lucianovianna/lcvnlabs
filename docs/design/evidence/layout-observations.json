@@ -1,0 +1,342 @@
+{
+  "results": [
+    {
+      "width": 320,
+      "layout": {
+        "width": 320,
+        "clientWidth": 320,
+        "scrollWidth": 320,
+        "fontLoaded": true,
+        "controls": [
+          {
+            "label": "lcvnlabs",
+            "x": 24,
+            "right": 115.8125,
+            "height": 44
+          },
+          {
+            "label": "Ativar tema escuro",
+            "x": 155.203125,
+            "right": 199.203125,
+            "height": 44
+          },
+          {
+            "label": "EN",
+            "x": 203.203125,
+            "right": 247.203125,
+            "height": 44
+          },
+          {
+            "label": "Menu",
+            "x": 252,
+            "right": 296,
+            "height": 44
+          },
+          {
+            "label": "Sobre",
+            "x": 269,
+            "right": 285,
+            "height": 48
+          },
+          {
+            "label": "Projetos",
+            "x": 269,
+            "right": 285,
+            "height": 48
+          },
+          {
+            "label": "Stack",
+            "x": 269,
+            "right": 285,
+            "height": 48
+          },
+          {
+            "label": "Contato",
+            "x": 269,
+            "right": 285,
+            "height": 48
+          }
+        ]
+      },
+      "languageStates": [
+        {
+          "language": "pt",
+          "theme": "dark",
+          "overflow": false
+        },
+        {
+          "language": "en",
+          "theme": "dark",
+          "overflow": false
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "layout": {
+        "width": 390,
+        "clientWidth": 390,
+        "scrollWidth": 390,
+        "fontLoaded": true,
+        "controls": [
+          {
+            "label": "lcvnlabs",
+            "x": 24,
+            "right": 127.734375,
+            "height": 44
+          },
+          {
+            "label": "Ativar tema escuro",
+            "x": 220.40625,
+            "right": 264.40625,
+            "height": 44
+          },
+          {
+            "label": "EN",
+            "x": 270,
+            "right": 314,
+            "height": 44
+          },
+          {
+            "label": "Menu",
+            "x": 322,
+            "right": 366,
+            "height": 44
+          },
+          {
+            "label": "Sobre",
+            "x": 339,
+            "right": 355,
+            "height": 48
+          },
+          {
+            "label": "Projetos",
+            "x": 339,
+            "right": 355,
+            "height": 48
+          },
+          {
+            "label": "Stack",
+            "x": 339,
+            "right": 355,
+            "height": 48
+          },
+          {
+            "label": "Contato",
+            "x": 339,
+            "right": 355,
+            "height": 48
+          }
+        ]
+      },
+      "languageStates": [
+        {
+          "language": "pt",
+          "theme": "dark",
+          "overflow": false
+        },
+        {
+          "language": "en",
+          "theme": "dark",
+          "overflow": false
+        }
+      ]
+    },
+    {
+      "width": 768,
+      "layout": {
+        "width": 768,
+        "clientWidth": 768,
+        "scrollWidth": 768,
+        "fontLoaded": true,
+        "controls": [
+          {
+            "label": "lcvnlabs",
+            "x": 24,
+            "right": 141.46875,
+            "height": 44
+          },
+          {
+            "label": "Sobre",
+            "x": 372.109375,
+            "right": 410.5,
+            "height": 44
+          },
+          {
+            "label": "Projetos",
+            "x": 434.5,
+            "right": 487.875,
+            "height": 44
+          },
+          {
+            "label": "Stack",
+            "x": 511.875,
+            "right": 548.515625,
+            "height": 44
+          },
+          {
+            "label": "Contato",
+            "x": 572.515625,
+            "right": 624,
+            "height": 44
+          },
+          {
+            "label": "Ativar tema escuro",
+            "x": 648,
+            "right": 692,
+            "height": 44
+          },
+          {
+            "label": "EN",
+            "x": 700,
+            "right": 744,
+            "height": 44
+          }
+        ]
+      },
+      "languageStates": [
+        {
+          "language": "pt",
+          "theme": "dark",
+          "overflow": false
+        },
+        {
+          "language": "en",
+          "theme": "dark",
+          "overflow": false
+        }
+      ]
+    },
+    {
+      "width": 946,
+      "layout": {
+        "width": 946,
+        "clientWidth": 946,
+        "scrollWidth": 946,
+        "fontLoaded": true,
+        "controls": [
+          {
+            "label": "lcvnlabs",
+            "x": 60,
+            "right": 177.46875,
+            "height": 44
+          },
+          {
+            "label": "Sobre",
+            "x": 514.109375,
+            "right": 552.5,
+            "height": 44
+          },
+          {
+            "label": "Projetos",
+            "x": 576.5,
+            "right": 629.875,
+            "height": 44
+          },
+          {
+            "label": "Stack",
+            "x": 653.875,
+            "right": 690.515625,
+            "height": 44
+          },
+          {
+            "label": "Contato",
+            "x": 714.515625,
+            "right": 766,
+            "height": 44
+          },
+          {
+            "label": "Ativar tema escuro",
+            "x": 790,
+            "right": 834,
+            "height": 44
+          },
+          {
+            "label": "EN",
+            "x": 842,
+            "right": 886,
+            "height": 44
+          }
+        ]
+      },
+      "languageStates": [
+        {
+          "language": "pt",
+          "theme": "dark",
+          "overflow": false
+        },
+        {
+          "language": "en",
+          "theme": "dark",
+          "overflow": false
+        }
+      ]
+    },
+    {
+      "width": 1440,
+      "layout": {
+        "width": 1440,
+        "clientWidth": 1440,
+        "scrollWidth": 1440,
+        "fontLoaded": true,
+        "controls": [
+          {
+            "label": "lcvnlabs",
+            "x": 180,
+            "right": 297.46875,
+            "height": 44
+          },
+          {
+            "label": "Sobre",
+            "x": 888.109375,
+            "right": 926.5,
+            "height": 44
+          },
+          {
+            "label": "Projetos",
+            "x": 950.5,
+            "right": 1003.875,
+            "height": 44
+          },
+          {
+            "label": "Stack",
+            "x": 1027.875,
+            "right": 1064.515625,
+            "height": 44
+          },
+          {
+            "label": "Contato",
+            "x": 1088.515625,
+            "right": 1140,
+            "height": 44
+          },
+          {
+            "label": "Ativar tema escuro",
+            "x": 1164,
+            "right": 1208,
+            "height": 44
+          },
+          {
+            "label": "EN",
+            "x": 1216,
+            "right": 1260,
+            "height": 44
+          }
+        ]
+      },
+      "languageStates": [
+        {
+          "language": "pt",
+          "theme": "dark",
+          "overflow": false
+        },
+        {
+          "language": "en",
+          "theme": "dark",
+          "overflow": false
+        }
+      ]
+    }
+  ],
+  "errors": []
+}

@@ -2,7 +2,6 @@
 import type { I18n } from '../../i18n/pt';
 interface Props { t: I18n }
 const { t } = Astro.props;
-
 const stackData = {
   backend: ['Laravel (PHP)', 'NestJS', 'Node.js'],
   database: ['PostgreSQL', 'Redis', 'Supabase'],
@@ -11,54 +10,31 @@ const stackData = {
 };
 ---
 
-<section id="stack">
+<section id="stack" tabindex="-1" aria-labelledby="stack-heading">
   <div class="container">
-    <div class="fade-in">
-      <h2 data-i18n="stack.heading">{t.stack.heading}</h2>
-      <div class="categories">
-        {Object.entries(stackData).map(([key, items]) => (
-          <div class="category">
-            <h3 data-i18n={`stack.categories.${key}`}>{t.stack.categories[key as keyof typeof t.stack.categories]}</h3>
-            <ul>
-              {items.map((item) => <li>{item}</li>)}
-            </ul>
-          </div>
-        ))}
-      </div>
+    <h2 id="stack-heading" data-i18n="stack.heading">{t.stack.heading}</h2>
+    <p class="section-intro" data-i18n="stack.intro">{t.stack.intro}</p>
+    <div class="categories">
+      {Object.entries(stackData).map(([key, items]) => (
+        <div class="category">
+          <h3 data-i18n={`stack.categories.${key}`}>{t.stack.categories[key as keyof typeof t.stack.categories]}</h3>
+          <ul>{items.map((item) => <li>{item}</li>)}</ul>
+        </div>
+      ))}
     </div>
   </div>
 </section>
 
 <style>
-h2 {
-  font-size: 1.5rem;
-  font-weight: 700;
-  margin-bottom: 2rem;
+#stack { padding-top: 0; }
+.categories { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 2rem; margin-top: 1.75rem; }
+.category:nth-child(n+2) { border-left: 1px solid var(--color-border); padding-left: 1.75rem; }
+h3 { font-size: 0.9rem; font-weight: 600; margin-bottom: 0.85rem; letter-spacing: -0.015em; }
+ul { list-style: none; color: var(--color-muted); font-size: 0.9rem; }
+li + li { margin-top: 0.35rem; }
+@media (max-width: 899px) {
+  .categories { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .category:nth-child(3) { border-left: 0; padding-left: 0; }
 }
-
-.categories {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 2rem;
-}
-
-h3 {
-  font-size: 0.8rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: var(--color-muted);
-  margin-bottom: 0.75rem;
-}
-
-ul {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 0.4rem;
-}
-
-li {
-  font-size: 0.95rem;
-}
+@media (max-width: 359px) { .categories { gap: 1.5rem 1rem; } .category:nth-child(n+2) { padding-left: 1rem; } .category:nth-child(3) { padding-left: 0; } }
 </style>

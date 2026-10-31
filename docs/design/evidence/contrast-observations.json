@@ -1,0 +1,964 @@
+{
+  "results": [
+    {
+      "theme": "light",
+      "minimum": 5.01,
+      "colors": [
+        {
+          "text": "Pular para o conteúdo",
+          "tag": "A",
+          "color": "rgb(15, 118, 110)",
+          "background": "rgb(255, 255, 255)",
+          "size": "16px",
+          "ratio": 5.47
+        },
+        {
+          "text": "lcvnlabs",
+          "tag": "SPAN",
+          "color": "rgb(15, 23, 42)",
+          "background": "rgb(248, 250, 252)",
+          "size": "20px",
+          "ratio": 17.06
+        },
+        {
+          "text": "Sobre",
+          "tag": "A",
+          "color": "rgb(71, 85, 105)",
+          "background": "rgb(248, 250, 252)",
+          "size": "13.6px",
+          "ratio": 7.24
+        },
+        {
+          "text": "Projetos",
+          "tag": "A",
+          "color": "rgb(71, 85, 105)",
+          "background": "rgb(248, 250, 252)",
+          "size": "13.6px",
+          "ratio": 7.24
+        },
+        {
+          "text": "Stack",
+          "tag": "A",
+          "color": "rgb(71, 85, 105)",
+          "background": "rgb(248, 250, 252)",
+          "size": "13.6px",
+          "ratio": 7.24
+        },
+        {
+          "text": "Contato",
+          "tag": "A",
+          "color": "rgb(71, 85, 105)",
+          "background": "rgb(248, 250, 252)",
+          "size": "13.6px",
+          "ratio": 7.24
+        },
+        {
+          "text": "EN",
+          "tag": "BUTTON",
+          "color": "rgb(15, 23, 42)",
+          "background": "rgb(255, 255, 255)",
+          "size": "12.8px",
+          "ratio": 17.85
+        },
+        {
+          "text": "Engenheiro de Software Sênior · Full Stack",
+          "tag": "P",
+          "color": "rgb(15, 118, 110)",
+          "background": "rgb(248, 250, 252)",
+          "size": "13.6px",
+          "ratio": 5.23
+        },
+        {
+          "text": "Luciano Vianna",
+          "tag": "H1",
+          "color": "rgb(15, 23, 42)",
+          "background": "rgb(248, 250, 252)",
+          "size": "80px",
+          "ratio": 17.06
+        },
+        {
+          "text": "Backend, dados e software em que você pode confiar.",
+          "tag": "P",
+          "color": "rgb(71, 85, 105)",
+          "background": "rgb(248, 250, 252)",
+          "size": "32px",
+          "ratio": 7.24
+        },
+        {
+          "text": "Ver projetos",
+          "tag": "SPAN",
+          "color": "rgb(255, 255, 255)",
+          "background": "rgb(15, 118, 110)",
+          "size": "14.4px",
+          "ratio": 5.47
+        },
+        {
+          "text": "LinkedIn",
+          "tag": "A",
+          "color": "rgb(15, 118, 110)",
+          "background": "rgb(248, 250, 252)",
+          "size": "14.4px",
+          "ratio": 5.23
+        },
+        {
+          "text": "Backend com propósito.",
+          "tag": "H2",
+          "color": "rgb(15, 23, 42)",
+          "background": "rgb(248, 250, 252)",
+          "size": "20px",
+          "ratio": 17.06
+        },
+        {
+          "text": "Laravel / PostgreSQL / Vue.js",
+          "tag": "P",
+          "color": "rgb(71, 85, 105)",
+          "background": "rgb(248, 250, 252)",
+          "size": "15.2px",
+          "ratio": 7.24
+        },
+        {
+          "text": "Sistemas críticos no setor elétrico regulatório.",
+          "tag": "P",
+          "color": "rgb(71, 85, 105)",
+          "background": "rgb(248, 250, 252)",
+          "size": "14.4px",
+          "ratio": 7.24
+        },
+        {
+          "text": "Experiência que vira resultado.",
+          "tag": "H2",
+          "color": "rgb(15, 23, 42)",
+          "background": "rgb(248, 250, 252)",
+          "size": "36px",
+          "ratio": 17.06
+        },
+        {
+          "text": "Mais de 5 anos desenvolvendo sistemas críticos, com foco em backe",
+          "tag": "P",
+          "color": "rgb(71, 85, 105)",
+          "background": "rgb(248, 250, 252)",
+          "size": "15.2px",
+          "ratio": 7.24
+        },
+        {
+          "text": "70%",
+          "tag": "DT",
+          "color": "rgb(15, 118, 110)",
+          "background": "rgb(248, 250, 252)",
+          "size": "32px",
+          "ratio": 5.23
+        },
+        {
+          "text": "menos tempo de carregamento em um dashboard gerencial.",
+          "tag": "DD",
+          "color": "rgb(71, 85, 105)",
+          "background": "rgb(248, 250, 252)",
+          "size": "13.6px",
+          "ratio": 7.24
+        },
+        {
+          "text": "4 pessoas",
+          "tag": "DT",
+          "color": "rgb(15, 118, 110)",
+          "background": "rgb(248, 250, 252)",
+          "size": "32px",
+          "ratio": 5.23
+        },
+        {
+          "text": "na squad que lidero tecnicamente, responsável por 3 sistemas inte",
+          "tag": "DD",
+          "color": "rgb(71, 85, 105)",
+          "background": "rgb(248, 250, 252)",
+          "size": "13.6px",
+          "ratio": 7.24
+        },
+        {
+          "text": "Projetos e experiências",
+          "tag": "H2",
+          "color": "rgb(15, 23, 42)",
+          "background": "rgb(248, 250, 252)",
+          "size": "36px",
+          "ratio": 17.06
+        },
+        {
+          "text": "Um pouco do que construo e dos problemas que ajudo a resolver.",
+          "tag": "P",
+          "color": "rgb(71, 85, 105)",
+          "background": "rgb(248, 250, 252)",
+          "size": "16px",
+          "ratio": 7.24
+        },
+        {
+          "text": "Experiência profissional · sistema interno",
+          "tag": "P",
+          "color": "rgb(71, 85, 105)",
+          "background": "rgb(248, 250, 252)",
+          "size": "12px",
+          "ratio": 7.24
+        },
+        {
+          "text": "Performance em PostgreSQL",
+          "tag": "H3",
+          "color": "rgb(15, 23, 42)",
+          "background": "rgb(248, 250, 252)",
+          "size": "24px",
+          "ratio": 17.06
+        },
+        {
+          "text": "Para acelerar um dashboard gerencial de alto uso, analisei planos",
+          "tag": "P",
+          "color": "rgb(71, 85, 105)",
+          "background": "rgb(248, 250, 252)",
+          "size": "15.2px",
+          "ratio": 7.24
+        },
+        {
+          "text": "PostgreSQL",
+          "tag": "SPAN",
+          "color": "rgb(71, 85, 105)",
+          "background": "rgb(226, 232, 240)",
+          "size": "12px",
+          "ratio": 6.15
+        },
+        {
+          "text": "Backend",
+          "tag": "SPAN",
+          "color": "rgb(71, 85, 105)",
+          "background": "rgb(226, 232, 240)",
+          "size": "12px",
+          "ratio": 6.15
+        },
+        {
+          "text": "-70%",
+          "tag": "STRONG",
+          "color": "rgb(15, 118, 110)",
+          "background": "rgb(248, 250, 252)",
+          "size": "36px",
+          "ratio": 5.23
+        },
+        {
+          "text": "no tempo de carregamento",
+          "tag": "SPAN",
+          "color": "rgb(71, 85, 105)",
+          "background": "rgb(248, 250, 252)",
+          "size": "13.6px",
+          "ratio": 7.24
+        },
+        {
+          "text": "lcvnlabs",
+          "tag": "H3",
+          "color": "rgb(15, 23, 42)",
+          "background": "rgb(248, 250, 252)",
+          "size": "24px",
+          "ratio": 17.06
+        },
+        {
+          "text": "Este portfólio — desenvolvido com Astro e TypeScript.",
+          "tag": "P",
+          "color": "rgb(71, 85, 105)",
+          "background": "rgb(248, 250, 252)",
+          "size": "15.2px",
+          "ratio": 7.24
+        },
+        {
+          "text": "Astro",
+          "tag": "SPAN",
+          "color": "rgb(71, 85, 105)",
+          "background": "rgb(226, 232, 240)",
+          "size": "12px",
+          "ratio": 6.15
+        },
+        {
+          "text": "TypeScript",
+          "tag": "SPAN",
+          "color": "rgb(71, 85, 105)",
+          "background": "rgb(226, 232, 240)",
+          "size": "12px",
+          "ratio": 6.15
+        },
+        {
+          "text": "Repositório",
+          "tag": "SPAN",
+          "color": "rgb(15, 118, 110)",
+          "background": "rgb(248, 250, 252)",
+          "size": "14.4px",
+          "ratio": 5.23
+        },
+        {
+          "text": "Stack técnica",
+          "tag": "H2",
+          "color": "rgb(15, 23, 42)",
+          "background": "rgb(248, 250, 252)",
+          "size": "36px",
+          "ratio": 17.06
+        },
+        {
+          "text": "Tecnologias e ferramentas que fazem parte do meu trabalho.",
+          "tag": "P",
+          "color": "rgb(71, 85, 105)",
+          "background": "rgb(248, 250, 252)",
+          "size": "16px",
+          "ratio": 7.24
+        },
+        {
+          "text": "Backend",
+          "tag": "H3",
+          "color": "rgb(15, 23, 42)",
+          "background": "rgb(248, 250, 252)",
+          "size": "14.4px",
+          "ratio": 17.06
+        },
+        {
+          "text": "Laravel (PHP)",
+          "tag": "LI",
+          "color": "rgb(71, 85, 105)",
+          "background": "rgb(248, 250, 252)",
+          "size": "14.4px",
+          "ratio": 7.24
+        },
+        {
+          "text": "NestJS",
+          "tag": "LI",
+          "color": "rgb(71, 85, 105)",
+          "background": "rgb(248, 250, 252)",
+          "size": "14.4px",
+          "ratio": 7.24
+        },
+        {
+          "text": "Node.js",
+          "tag": "LI",
+          "color": "rgb(71, 85, 105)",
+          "background": "rgb(248, 250, 252)",
+          "size": "14.4px",
+          "ratio": 7.24
+        },
+        {
+          "text": "Banco de dados",
+          "tag": "H3",
+          "color": "rgb(15, 23, 42)",
+          "background": "rgb(248, 250, 252)",
+          "size": "14.4px",
+          "ratio": 17.06
+        },
+        {
+          "text": "PostgreSQL",
+          "tag": "LI",
+          "color": "rgb(71, 85, 105)",
+          "background": "rgb(248, 250, 252)",
+          "size": "14.4px",
+          "ratio": 7.24
+        },
+        {
+          "text": "Redis",
+          "tag": "LI",
+          "color": "rgb(71, 85, 105)",
+          "background": "rgb(248, 250, 252)",
+          "size": "14.4px",
+          "ratio": 7.24
+        },
+        {
+          "text": "Supabase",
+          "tag": "LI",
+          "color": "rgb(71, 85, 105)",
+          "background": "rgb(248, 250, 252)",
+          "size": "14.4px",
+          "ratio": 7.24
+        },
+        {
+          "text": "Frontend",
+          "tag": "H3",
+          "color": "rgb(15, 23, 42)",
+          "background": "rgb(248, 250, 252)",
+          "size": "14.4px",
+          "ratio": 17.06
+        },
+        {
+          "text": "Vue.js",
+          "tag": "LI",
+          "color": "rgb(71, 85, 105)",
+          "background": "rgb(248, 250, 252)",
+          "size": "14.4px",
+          "ratio": 7.24
+        },
+        {
+          "text": "TypeScript",
+          "tag": "LI",
+          "color": "rgb(71, 85, 105)",
+          "background": "rgb(248, 250, 252)",
+          "size": "14.4px",
+          "ratio": 7.24
+        },
+        {
+          "text": "Astro",
+          "tag": "LI",
+          "color": "rgb(71, 85, 105)",
+          "background": "rgb(248, 250, 252)",
+          "size": "14.4px",
+          "ratio": 7.24
+        },
+        {
+          "text": "Infra & Cloud",
+          "tag": "H3",
+          "color": "rgb(15, 23, 42)",
+          "background": "rgb(248, 250, 252)",
+          "size": "14.4px",
+          "ratio": 17.06
+        },
+        {
+          "text": "AWS",
+          "tag": "LI",
+          "color": "rgb(71, 85, 105)",
+          "background": "rgb(248, 250, 252)",
+          "size": "14.4px",
+          "ratio": 7.24
+        },
+        {
+          "text": "Docker",
+          "tag": "LI",
+          "color": "rgb(71, 85, 105)",
+          "background": "rgb(248, 250, 252)",
+          "size": "14.4px",
+          "ratio": 7.24
+        },
+        {
+          "text": "GitHub Actions",
+          "tag": "LI",
+          "color": "rgb(71, 85, 105)",
+          "background": "rgb(248, 250, 252)",
+          "size": "14.4px",
+          "ratio": 7.24
+        },
+        {
+          "text": "Vamos conversar?",
+          "tag": "H2",
+          "color": "rgb(15, 23, 42)",
+          "background": "rgb(237, 247, 246)",
+          "size": "28.8px",
+          "ratio": 16.35
+        },
+        {
+          "text": "Para falar sobre engenharia de software, projetos ou oportunidade",
+          "tag": "P",
+          "color": "rgb(71, 85, 105)",
+          "background": "rgb(237, 247, 246)",
+          "size": "14.4px",
+          "ratio": 6.94
+        },
+        {
+          "text": "Conversar no LinkedIn",
+          "tag": "SPAN",
+          "color": "rgb(255, 255, 255)",
+          "background": "rgb(15, 118, 110)",
+          "size": "14.4px",
+          "ratio": 5.47
+        },
+        {
+          "text": "GitHub",
+          "tag": "A",
+          "color": "rgb(15, 118, 110)",
+          "background": "rgb(237, 247, 246)",
+          "size": "14.4px",
+          "ratio": 5.01
+        },
+        {
+          "text": "© 2026 Luciano Vianna",
+          "tag": "SPAN",
+          "color": "rgb(71, 85, 105)",
+          "background": "rgb(248, 250, 252)",
+          "size": "12px",
+          "ratio": 7.24
+        },
+        {
+          "text": "Voltar ao topo",
+          "tag": "SPAN",
+          "color": "rgb(15, 118, 110)",
+          "background": "rgb(248, 250, 252)",
+          "size": "12px",
+          "ratio": 5.23
+        }
+      ]
+    },
+    {
+      "theme": "dark",
+      "minimum": 6.97,
+      "colors": [
+        {
+          "text": "Pular para o conteúdo",
+          "tag": "A",
+          "color": "rgb(94, 234, 212)",
+          "background": "rgb(30, 41, 59)",
+          "size": "16px",
+          "ratio": 9.89
+        },
+        {
+          "text": "lcvnlabs",
+          "tag": "SPAN",
+          "color": "rgb(241, 245, 249)",
+          "background": "rgb(15, 23, 42)",
+          "size": "20px",
+          "ratio": 16.3
+        },
+        {
+          "text": "Sobre",
+          "tag": "A",
+          "color": "rgb(203, 213, 225)",
+          "background": "rgb(15, 23, 42)",
+          "size": "13.6px",
+          "ratio": 12.02
+        },
+        {
+          "text": "Projetos",
+          "tag": "A",
+          "color": "rgb(203, 213, 225)",
+          "background": "rgb(15, 23, 42)",
+          "size": "13.6px",
+          "ratio": 12.02
+        },
+        {
+          "text": "Stack",
+          "tag": "A",
+          "color": "rgb(203, 213, 225)",
+          "background": "rgb(15, 23, 42)",
+          "size": "13.6px",
+          "ratio": 12.02
+        },
+        {
+          "text": "Contato",
+          "tag": "A",
+          "color": "rgb(203, 213, 225)",
+          "background": "rgb(15, 23, 42)",
+          "size": "13.6px",
+          "ratio": 12.02
+        },
+        {
+          "text": "EN",
+          "tag": "BUTTON",
+          "color": "rgb(241, 245, 249)",
+          "background": "rgb(30, 41, 59)",
+          "size": "12.8px",
+          "ratio": 13.35
+        },
+        {
+          "text": "Engenheiro de Software Sênior · Full Stack",
+          "tag": "P",
+          "color": "rgb(94, 234, 212)",
+          "background": "rgb(15, 23, 42)",
+          "size": "13.6px",
+          "ratio": 12.07
+        },
+        {
+          "text": "Luciano Vianna",
+          "tag": "H1",
+          "color": "rgb(241, 245, 249)",
+          "background": "rgb(15, 23, 42)",
+          "size": "80px",
+          "ratio": 16.3
+        },
+        {
+          "text": "Backend, dados e software em que você pode confiar.",
+          "tag": "P",
+          "color": "rgb(203, 213, 225)",
+          "background": "rgb(15, 23, 42)",
+          "size": "32px",
+          "ratio": 12.02
+        },
+        {
+          "text": "Ver projetos",
+          "tag": "SPAN",
+          "color": "rgb(15, 23, 42)",
+          "background": "rgb(94, 234, 212)",
+          "size": "14.4px",
+          "ratio": 12.07
+        },
+        {
+          "text": "LinkedIn",
+          "tag": "A",
+          "color": "rgb(94, 234, 212)",
+          "background": "rgb(15, 23, 42)",
+          "size": "14.4px",
+          "ratio": 12.07
+        },
+        {
+          "text": "Backend com propósito.",
+          "tag": "H2",
+          "color": "rgb(241, 245, 249)",
+          "background": "rgb(15, 23, 42)",
+          "size": "20px",
+          "ratio": 16.3
+        },
+        {
+          "text": "Laravel / PostgreSQL / Vue.js",
+          "tag": "P",
+          "color": "rgb(203, 213, 225)",
+          "background": "rgb(15, 23, 42)",
+          "size": "15.2px",
+          "ratio": 12.02
+        },
+        {
+          "text": "Sistemas críticos no setor elétrico regulatório.",
+          "tag": "P",
+          "color": "rgb(203, 213, 225)",
+          "background": "rgb(15, 23, 42)",
+          "size": "14.4px",
+          "ratio": 12.02
+        },
+        {
+          "text": "Experiência que vira resultado.",
+          "tag": "H2",
+          "color": "rgb(241, 245, 249)",
+          "background": "rgb(15, 23, 42)",
+          "size": "36px",
+          "ratio": 16.3
+        },
+        {
+          "text": "Mais de 5 anos desenvolvendo sistemas críticos, com foco em backe",
+          "tag": "P",
+          "color": "rgb(203, 213, 225)",
+          "background": "rgb(15, 23, 42)",
+          "size": "15.2px",
+          "ratio": 12.02
+        },
+        {
+          "text": "70%",
+          "tag": "DT",
+          "color": "rgb(94, 234, 212)",
+          "background": "rgb(15, 23, 42)",
+          "size": "32px",
+          "ratio": 12.07
+        },
+        {
+          "text": "menos tempo de carregamento em um dashboard gerencial.",
+          "tag": "DD",
+          "color": "rgb(203, 213, 225)",
+          "background": "rgb(15, 23, 42)",
+          "size": "13.6px",
+          "ratio": 12.02
+        },
+        {
+          "text": "4 pessoas",
+          "tag": "DT",
+          "color": "rgb(94, 234, 212)",
+          "background": "rgb(15, 23, 42)",
+          "size": "32px",
+          "ratio": 12.07
+        },
+        {
+          "text": "na squad que lidero tecnicamente, responsável por 3 sistemas inte",
+          "tag": "DD",
+          "color": "rgb(203, 213, 225)",
+          "background": "rgb(15, 23, 42)",
+          "size": "13.6px",
+          "ratio": 12.02
+        },
+        {
+          "text": "Projetos e experiências",
+          "tag": "H2",
+          "color": "rgb(241, 245, 249)",
+          "background": "rgb(15, 23, 42)",
+          "size": "36px",
+          "ratio": 16.3
+        },
+        {
+          "text": "Um pouco do que construo e dos problemas que ajudo a resolver.",
+          "tag": "P",
+          "color": "rgb(203, 213, 225)",
+          "background": "rgb(15, 23, 42)",
+          "size": "16px",
+          "ratio": 12.02
+        },
+        {
+          "text": "Experiência profissional · sistema interno",
+          "tag": "P",
+          "color": "rgb(203, 213, 225)",
+          "background": "rgb(15, 23, 42)",
+          "size": "12px",
+          "ratio": 12.02
+        },
+        {
+          "text": "Performance em PostgreSQL",
+          "tag": "H3",
+          "color": "rgb(241, 245, 249)",
+          "background": "rgb(15, 23, 42)",
+          "size": "24px",
+          "ratio": 16.3
+        },
+        {
+          "text": "Para acelerar um dashboard gerencial de alto uso, analisei planos",
+          "tag": "P",
+          "color": "rgb(203, 213, 225)",
+          "background": "rgb(15, 23, 42)",
+          "size": "15.2px",
+          "ratio": 12.02
+        },
+        {
+          "text": "PostgreSQL",
+          "tag": "SPAN",
+          "color": "rgb(203, 213, 225)",
+          "background": "rgb(51, 65, 85)",
+          "size": "12px",
+          "ratio": 6.97
+        },
+        {
+          "text": "Backend",
+          "tag": "SPAN",
+          "color": "rgb(203, 213, 225)",
+          "background": "rgb(51, 65, 85)",
+          "size": "12px",
+          "ratio": 6.97
+        },
+        {
+          "text": "-70%",
+          "tag": "STRONG",
+          "color": "rgb(94, 234, 212)",
+          "background": "rgb(15, 23, 42)",
+          "size": "36px",
+          "ratio": 12.07
+        },
+        {
+          "text": "no tempo de carregamento",
+          "tag": "SPAN",
+          "color": "rgb(203, 213, 225)",
+          "background": "rgb(15, 23, 42)",
+          "size": "13.6px",
+          "ratio": 12.02
+        },
+        {
+          "text": "lcvnlabs",
+          "tag": "H3",
+          "color": "rgb(241, 245, 249)",
+          "background": "rgb(15, 23, 42)",
+          "size": "24px",
+          "ratio": 16.3
+        },
+        {
+          "text": "Este portfólio — desenvolvido com Astro e TypeScript.",
+          "tag": "P",
+          "color": "rgb(203, 213, 225)",
+          "background": "rgb(15, 23, 42)",
+          "size": "15.2px",
+          "ratio": 12.02
+        },
+        {
+          "text": "Astro",
+          "tag": "SPAN",
+          "color": "rgb(203, 213, 225)",
+          "background": "rgb(51, 65, 85)",
+          "size": "12px",
+          "ratio": 6.97
+        },
+        {
+          "text": "TypeScript",
+          "tag": "SPAN",
+          "color": "rgb(203, 213, 225)",
+          "background": "rgb(51, 65, 85)",
+          "size": "12px",
+          "ratio": 6.97
+        },
+        {
+          "text": "Repositório",
+          "tag": "SPAN",
+          "color": "rgb(94, 234, 212)",
+          "background": "rgb(15, 23, 42)",
+          "size": "14.4px",
+          "ratio": 12.07
+        },
+        {
+          "text": "Stack técnica",
+          "tag": "H2",
+          "color": "rgb(241, 245, 249)",
+          "background": "rgb(15, 23, 42)",
+          "size": "36px",
+          "ratio": 16.3
+        },
+        {
+          "text": "Tecnologias e ferramentas que fazem parte do meu trabalho.",
+          "tag": "P",
+          "color": "rgb(203, 213, 225)",
+          "background": "rgb(15, 23, 42)",
+          "size": "16px",
+          "ratio": 12.02
+        },
+        {
+          "text": "Backend",
+          "tag": "H3",
+          "color": "rgb(241, 245, 249)",
+          "background": "rgb(15, 23, 42)",
+          "size": "14.4px",
+          "ratio": 16.3
+        },
+        {
+          "text": "Laravel (PHP)",
+          "tag": "LI",
+          "color": "rgb(203, 213, 225)",
+          "background": "rgb(15, 23, 42)",
+          "size": "14.4px",
+          "ratio": 12.02
+        },
+        {
+          "text": "NestJS",
+          "tag": "LI",
+          "color": "rgb(203, 213, 225)",
+          "background": "rgb(15, 23, 42)",
+          "size": "14.4px",
+          "ratio": 12.02
+        },
+        {
+          "text": "Node.js",
+          "tag": "LI",
+          "color": "rgb(203, 213, 225)",
+          "background": "rgb(15, 23, 42)",
+          "size": "14.4px",
+          "ratio": 12.02
+        },
+        {
+          "text": "Banco de dados",
+          "tag": "H3",
+          "color": "rgb(241, 245, 249)",
+          "background": "rgb(15, 23, 42)",
+          "size": "14.4px",
+          "ratio": 16.3
+        },
+        {
+          "text": "PostgreSQL",
+          "tag": "LI",
+          "color": "rgb(203, 213, 225)",
+          "background": "rgb(15, 23, 42)",
+          "size": "14.4px",
+          "ratio": 12.02
+        },
+        {
+          "text": "Redis",
+          "tag": "LI",
+          "color": "rgb(203, 213, 225)",
+          "background": "rgb(15, 23, 42)",
+          "size": "14.4px",
+          "ratio": 12.02
+        },
+        {
+          "text": "Supabase",
+          "tag": "LI",
+          "color": "rgb(203, 213, 225)",
+          "background": "rgb(15, 23, 42)",
+          "size": "14.4px",
+          "ratio": 12.02
+        },
+        {
+          "text": "Frontend",
+          "tag": "H3",
+          "color": "rgb(241, 245, 249)",
+          "background": "rgb(15, 23, 42)",
+          "size": "14.4px",
+          "ratio": 16.3
+        },
+        {
+          "text": "Vue.js",
+          "tag": "LI",
+          "color": "rgb(203, 213, 225)",
+          "background": "rgb(15, 23, 42)",
+          "size": "14.4px",
+          "ratio": 12.02
+        },
+        {
+          "text": "TypeScript",
+          "tag": "LI",
+          "color": "rgb(203, 213, 225)",
+          "background": "rgb(15, 23, 42)",
+          "size": "14.4px",
+          "ratio": 12.02
+        },
+        {
+          "text": "Astro",
+          "tag": "LI",
+          "color": "rgb(203, 213, 225)",
+          "background": "rgb(15, 23, 42)",
+          "size": "14.4px",
+          "ratio": 12.02
+        },
+        {
+          "text": "Infra & Cloud",
+          "tag": "H3",
+          "color": "rgb(241, 245, 249)",
+          "background": "rgb(15, 23, 42)",
+          "size": "14.4px",
+          "ratio": 16.3
+        },
+        {
+          "text": "AWS",
+          "tag": "LI",
+          "color": "rgb(203, 213, 225)",
+          "background": "rgb(15, 23, 42)",
+          "size": "14.4px",
+          "ratio": 12.02
+        },
+        {
+          "text": "Docker",
+          "tag": "LI",
+          "color": "rgb(203, 213, 225)",
+          "background": "rgb(15, 23, 42)",
+          "size": "14.4px",
+          "ratio": 12.02
+        },
+        {
+          "text": "GitHub Actions",
+          "tag": "LI",
+          "color": "rgb(203, 213, 225)",
+          "background": "rgb(15, 23, 42)",
+          "size": "14.4px",
+          "ratio": 12.02
+        },
+        {
+          "text": "Vamos conversar?",
+          "tag": "H2",
+          "color": "rgb(241, 245, 249)",
+          "background": "rgb(22, 47, 53)",
+          "size": "28.8px",
+          "ratio": 12.85
+        },
+        {
+          "text": "Para falar sobre engenharia de software, projetos ou oportunidade",
+          "tag": "P",
+          "color": "rgb(203, 213, 225)",
+          "background": "rgb(22, 47, 53)",
+          "size": "14.4px",
+          "ratio": 9.48
+        },
+        {
+          "text": "Conversar no LinkedIn",
+          "tag": "SPAN",
+          "color": "rgb(15, 23, 42)",
+          "background": "rgb(94, 234, 212)",
+          "size": "14.4px",
+          "ratio": 12.07
+        },
+        {
+          "text": "GitHub",
+          "tag": "A",
+          "color": "rgb(94, 234, 212)",
+          "background": "rgb(22, 47, 53)",
+          "size": "14.4px",
+          "ratio": 9.51
+        },
+        {
+          "text": "© 2026 Luciano Vianna",
+          "tag": "SPAN",
+          "color": "rgb(203, 213, 225)",
+          "background": "rgb(15, 23, 42)",
+          "size": "12px",
+          "ratio": 12.02
+        },
+        {
+          "text": "Voltar ao topo",
+          "tag": "SPAN",
+          "color": "rgb(94, 234, 212)",
+          "background": "rgb(15, 23, 42)",
+          "size": "12px",
+          "ratio": 12.07
+        }
+      ]
+    }
+  ],
+  "backToTop": {
+    "before": 1005,
+    "after": 0
+  }
+}
