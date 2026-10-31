@@ -10,15 +10,6 @@ const { t } = Astro.props;
     <h2 id="projects-heading" data-i18n="projects.heading">{t.projects.heading}</h2>
     <p class="section-intro" data-i18n="projects.intro">{t.projects.intro}</p>
     <div class="project-list">
-      <article class="case-study" aria-labelledby="case-heading">
-        <div>
-          <p class="context" data-i18n="projects.case.context">{t.projects.case.context}</p>
-          <h3 id="case-heading" data-i18n="projects.case.title">{t.projects.case.title}</h3>
-          <p class="description" data-i18n="projects.case.description">{t.projects.case.description}</p>
-          <div class="tags"><span class="tag">PostgreSQL</span><span class="tag">Backend</span></div>
-        </div>
-        <div class="case-result"><strong data-i18n="projects.case.result">{t.projects.case.result}</strong><span data-i18n="projects.case.resultLabel">{t.projects.case.resultLabel}</span></div>
-      </article>
       {t.projects.items.map((project, i) => (
         <article class="project" aria-labelledby={`project-${i}`}>
           <div>
@@ -37,22 +28,15 @@ const { t } = Astro.props;
 #projetos { padding-top: 0; }
 #projetos > .container { border-top: 1px solid var(--color-border); padding-top: 3rem; }
 .project-list { margin-top: 1.75rem; }
-.case-study, .project { display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 0.8fr); align-items: center; gap: 2rem; border-top: 1px solid var(--color-border); padding-block: 1.75rem; }
+.project { display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 0.8fr); align-items: center; gap: 2rem; border-top: 1px solid var(--color-border); padding-block: 1.75rem; }
 .project { border-bottom: 1px solid var(--color-border); }
 h3 { font-size: 1.5rem; margin-top: 0.3rem; }
-.context { font-size: 0.75rem; color: var(--color-muted); }
 .description { font-size: 0.95rem; color: var(--color-muted); margin-top: 0.5rem; }
 .tags { margin-top: 0.85rem; }
-.case-result { border-left: 1px solid var(--color-border); padding: 1rem 0 1rem 2rem; }
-.case-result strong { display: block; font-size: 2.25rem; font-weight: 700; line-height: 1.2; color: var(--color-accent); letter-spacing: -0.04em; font-variant-numeric: tabular-nums; }
-.case-result span { display: block; font-size: 0.85rem; color: var(--color-muted); margin-top: 0.5rem; }
 .repo { justify-self: end; }
 @media (max-width: 599px) {
   #projetos > .container { padding-top: 2.5rem; }
-  .case-study, .project { grid-template-columns: 1fr; gap: 1.25rem; }
-  .case-result { border-left: 0; padding: 0; display: flex; align-items: center; gap: 1rem; }
-  .case-result strong { font-size: 1.75rem; }
-  .case-result span { margin: 0; }
+  .project { grid-template-columns: 1fr; gap: 1.25rem; }
   .repo { justify-self: start; }
   h3 { font-size: 1.3rem; }
 }
