@@ -1,0 +1,657 @@
+{
+  "schemaVersion": "uizze.visual-evidence.v1",
+  "scope": "lcvnlabs single-page redesign: approved petroleum palette/B2 SVG, responsive header, five real-content sections, PT/EN, light/dark, keyboard/touch and recovery states",
+  "platform": "web",
+  "sourceRevision": "c87e75137464ac0ce3f51dd44dedf5b01104ceda",
+  "url": "http://127.0.0.1:4173/",
+  "build": "npm run build; production dist served by local HTTP server",
+  "sources": [
+    {
+      "path": "../../../astro.config.mjs",
+      "sha256": "7011998d6155bd54f81b01394d3503cc1e1f8da3abe38b81f35f6e53a4117fa3"
+    },
+    {
+      "path": "../../../package-lock.json",
+      "sha256": "3b6f527e2b39688204cf038cb99bfcb5c9226262a594485d1103b777d6eb3c89"
+    },
+    {
+      "path": "../../../package.json",
+      "sha256": "bf65bf342b0e03bf202361fcbf7ce65f9e0d1bfd62f92d1ba5c5eed69f0cf5ee"
+    },
+    {
+      "path": "../../../public/favicon.ico",
+      "sha256": "f2407d4d1ea7903deb357495a43294c86245671e98e77987d0ad555c0a79d3dd"
+    },
+    {
+      "path": "../../../public/favicon.svg",
+      "sha256": "66f550f0faeee03243b3e3b60169528da5ae1c1f624ec3e267155673c154bd83"
+    },
+    {
+      "path": "../../../src/components/BrandMark.astro",
+      "sha256": "f7d802eecc7b1af8b4b35edcd460dfd7eb54eac6465f961966d27c3c022f7e2e"
+    },
+    {
+      "path": "../../../src/components/sections/Contato.astro",
+      "sha256": "52c3253970fe27c255394c8a895614f4fc9713a303ddfcb9767c516334169cb4"
+    },
+    {
+      "path": "../../../src/components/sections/Hero.astro",
+      "sha256": "87a30c843dd5e3aaaf0f6e68385500bdcdcbc4f9b8c8e3bb65b55100e247fe4d"
+    },
+    {
+      "path": "../../../src/components/sections/Projetos.astro",
+      "sha256": "f9205e8bcc11b187dc636568a0b8ede961fc77b0866fe00ea9f25464f0ac2190"
+    },
+    {
+      "path": "../../../src/components/sections/Sobre.astro",
+      "sha256": "de4e6a155887a51dbe80d272a7b69df3259f11201c0cfee1d74568c0e47d115f"
+    },
+    {
+      "path": "../../../src/components/sections/Stack.astro",
+      "sha256": "8da79f2c71575f4b07cee83286de6ab5a5f2539640dcf64ff1482b2497492a5a"
+    },
+    {
+      "path": "../../../src/i18n/en.ts",
+      "sha256": "634183e09fe91671c7306e614c348e0b416e632cfab52ed5f964d2a9fdb4b966"
+    },
+    {
+      "path": "../../../src/i18n/index.ts",
+      "sha256": "b32fed9a2262df87a66444a9a7c9166dce85cbedeaae0f18ad5ed2ef5c7352d5"
+    },
+    {
+      "path": "../../../src/i18n/pt.ts",
+      "sha256": "ca7e6dd466636428881590fe6e6c97a1a6768972b393070ac2eb13f805079a27"
+    },
+    {
+      "path": "../../../src/layouts/Base.astro",
+      "sha256": "21f1b31d82c3b77a77d2d0ecb7adc468b3861bdf7fd9e09100a4d67855dc3d7a"
+    },
+    {
+      "path": "../../../src/pages/index.astro",
+      "sha256": "02520254f67f6d407b19d4423fc0bda40628c8dd7ad2b46d024acdc94ab2f357"
+    },
+    {
+      "path": "../../../src/styles/global.css",
+      "sha256": "91e76167e7b29deced26e969bc7ca36994d0068114bd40eef143fd6febc777e4"
+    }
+  ],
+  "comparison": "target",
+  "target": {
+    "path": "../target.png",
+    "kind": "image",
+    "sha256": "03b7580def3dbc2a732cdf8043d90d0fdc89fd9f74bfa35651f27eb00c1c7554",
+    "dimensions": {
+      "width": 946,
+      "height": 1663
+    }
+  },
+  "requiredChecks": [
+    {
+      "id": "layout-320",
+      "kind": "visual"
+    },
+    {
+      "id": "layout-390",
+      "kind": "visual"
+    },
+    {
+      "id": "layout-768",
+      "kind": "visual"
+    },
+    {
+      "id": "layout-946",
+      "kind": "visual"
+    },
+    {
+      "id": "layout-1440",
+      "kind": "visual"
+    },
+    {
+      "id": "dark-en-390",
+      "kind": "visual"
+    },
+    {
+      "id": "dark-en-1440",
+      "kind": "visual"
+    },
+    {
+      "id": "target-comparison",
+      "kind": "visual"
+    },
+    {
+      "id": "desktop-keyboard",
+      "kind": "interaction"
+    },
+    {
+      "id": "mobile-keyboard",
+      "kind": "interaction"
+    },
+    {
+      "id": "touch-and-persistence",
+      "kind": "interaction"
+    },
+    {
+      "id": "reduced-motion",
+      "kind": "interaction"
+    },
+    {
+      "id": "blocked-storage",
+      "kind": "interaction"
+    },
+    {
+      "id": "preference-recovery",
+      "kind": "interaction"
+    },
+    {
+      "id": "no-javascript",
+      "kind": "interaction"
+    },
+    {
+      "id": "contrast-light",
+      "kind": "visual"
+    },
+    {
+      "id": "contrast-dark",
+      "kind": "visual"
+    },
+    {
+      "id": "top-navigation",
+      "kind": "interaction"
+    }
+  ],
+  "checks": [
+    {
+      "id": "layout-320",
+      "status": "pass",
+      "state": "Portuguese, light theme; all five sections",
+      "environment": {
+        "kind": "browser",
+        "name": "Chromium 156.0.8078.4 headless via CDP",
+        "width": 320,
+        "height": 900,
+        "deviceScaleFactor": 1
+      },
+      "observed": "Inspected actual render at 320px. No page overflow; visible header targets inside viewport and at least 44px high. Inter loaded. Projects summarize actual work; stack matches original technologies.",
+      "artifacts": [
+        {
+          "path": "320-light-pt.png",
+          "kind": "image",
+          "sha256": "266e49de4478ce66a9af8712522e45a6ebc3b9e6c7c0af7f0009d4ef47c56923",
+          "dimensions": {
+            "width": 320,
+            "height": 2835
+          }
+        }
+      ]
+    },
+    {
+      "id": "layout-390",
+      "status": "pass",
+      "state": "Portuguese, light theme; all five sections",
+      "environment": {
+        "kind": "browser",
+        "name": "Chromium 156.0.8078.4 headless via CDP",
+        "width": 390,
+        "height": 900,
+        "deviceScaleFactor": 1
+      },
+      "observed": "Inspected actual render at 390px. No page overflow; visible header targets inside viewport and at least 44px high. Inter loaded. Projects summarize actual work; stack matches original technologies.",
+      "artifacts": [
+        {
+          "path": "390-light-pt.png",
+          "kind": "image",
+          "sha256": "214082d08ffdd6b3b2893cab180b3eda6d54810efcd50c0f4a40df13b8d720ed",
+          "dimensions": {
+            "width": 390,
+            "height": 2618
+          }
+        }
+      ]
+    },
+    {
+      "id": "layout-768",
+      "status": "pass",
+      "state": "Portuguese, light theme; all five sections",
+      "environment": {
+        "kind": "browser",
+        "name": "Chromium 156.0.8078.4 headless via CDP",
+        "width": 768,
+        "height": 900,
+        "deviceScaleFactor": 1
+      },
+      "observed": "Inspected actual render at 768px. No page overflow; visible header targets inside viewport and at least 44px high. Inter loaded. Projects summarize actual work; stack matches original technologies.",
+      "artifacts": [
+        {
+          "path": "768-light-pt.png",
+          "kind": "image",
+          "sha256": "ec8baffc73b47318b6a4c2c297f7dcdd8e5bcdea8b27566b8409f58e65dae915",
+          "dimensions": {
+            "width": 768,
+            "height": 2108
+          }
+        }
+      ]
+    },
+    {
+      "id": "layout-946",
+      "status": "pass",
+      "state": "Portuguese, light theme; all five sections",
+      "environment": {
+        "kind": "browser",
+        "name": "Chromium 156.0.8078.4 headless via CDP",
+        "width": 946,
+        "height": 900,
+        "deviceScaleFactor": 1
+      },
+      "observed": "Inspected actual render at 946px. No page overflow; visible header targets inside viewport and at least 44px high. Inter loaded. Projects summarize actual work; stack matches original technologies.",
+      "artifacts": [
+        {
+          "path": "946-light-pt.png",
+          "kind": "image",
+          "sha256": "678e613ca3700d3b393c27b2d37f1bc7e8094e4fc55cc83c6fd49db52c3c8a8e",
+          "dimensions": {
+            "width": 946,
+            "height": 1878
+          }
+        }
+      ]
+    },
+    {
+      "id": "layout-1440",
+      "status": "pass",
+      "state": "Portuguese, light theme; all five sections",
+      "environment": {
+        "kind": "browser",
+        "name": "Chromium 156.0.8078.4 headless via CDP",
+        "width": 1440,
+        "height": 900,
+        "deviceScaleFactor": 1
+      },
+      "observed": "Inspected actual render at 1440px. No page overflow; visible header targets inside viewport and at least 44px high. Inter loaded. Projects summarize actual work; stack matches original technologies.",
+      "artifacts": [
+        {
+          "path": "1440-light-pt.png",
+          "kind": "image",
+          "sha256": "c6a7ac30305e89df394e9fce2864355158a920140044b4f0f56d760cc1b86390",
+          "dimensions": {
+            "width": 1440,
+            "height": 1905
+          }
+        }
+      ]
+    },
+    {
+      "id": "dark-en-390",
+      "status": "pass",
+      "state": "English, dark theme; all five sections",
+      "environment": {
+        "kind": "browser",
+        "name": "Chromium 156.0.8078.4 headless via CDP",
+        "width": 390,
+        "height": 900,
+        "deviceScaleFactor": 1
+      },
+      "observed": "Inspected dark palette, translated content and reflow. Body background #0f172a; document language en. Tags readable against their actual dark background.",
+      "artifacts": [
+        {
+          "path": "390-dark-en.png",
+          "kind": "image",
+          "sha256": "5e5b2cd31c3dbe3e9a98cb4d2c46bdb34765ca878b1e5f05101d92d7a70b6d5d",
+          "dimensions": {
+            "width": 390,
+            "height": 2568
+          }
+        }
+      ]
+    },
+    {
+      "id": "dark-en-1440",
+      "status": "pass",
+      "state": "English, dark theme; all five sections",
+      "environment": {
+        "kind": "browser",
+        "name": "Chromium 156.0.8078.4 headless via CDP",
+        "width": 1440,
+        "height": 900,
+        "deviceScaleFactor": 1
+      },
+      "observed": "Inspected dark palette, translated content and reflow. Body background #0f172a; document language en. Tags readable against their actual dark background.",
+      "artifacts": [
+        {
+          "path": "1440-dark-en.png",
+          "kind": "image",
+          "sha256": "3b34acb3cd8e8b6080e36bca1c0ac22a03e706c136f0258e6b2218b5f3d43534",
+          "dimensions": {
+            "width": 1440,
+            "height": 1816
+          }
+        }
+      ]
+    },
+    {
+      "id": "target-comparison",
+      "status": "pass",
+      "state": "Portuguese/light, matching target viewport",
+      "environment": {
+        "kind": "browser",
+        "name": "Chromium 156.0.8078.4 headless via CDP",
+        "width": 946,
+        "height": 1663,
+        "deviceScaleFactor": 1
+      },
+      "observed": "Compared actual 946×1663 frame with generated target. Hierarchy, two-column hero, proof, editorial project rows and stack retained. Exact B2 replaces generated logo; actual technologies/year and revised copy replace incorrect generated content. Final full document is taller than the target; no pixel-perfect claim.",
+      "artifacts": [
+        {
+          "path": "946-target-viewport.png",
+          "kind": "image",
+          "sha256": "874bd87bf99601a6f134dc20dbd093cad2c8f0fa07abe6619bf0be4b361456ca",
+          "dimensions": {
+            "width": 946,
+            "height": 1663
+          }
+        }
+      ]
+    },
+    {
+      "id": "desktop-keyboard",
+      "status": "pass",
+      "state": "desktop keyboard",
+      "environment": {
+        "kind": "browser",
+        "name": "Chromium 156.0.8078.4 headless via CDP",
+        "width": 1440,
+        "height": 900,
+        "deviceScaleFactor": 1
+      },
+      "observed": "[{\"tag\":\"A\",\"label\":\"lcvnlabs — início\",\"href\":\"#topo\",\"x\":180,\"y\":14,\"w\":117.46875,\"h\":44,\"outline\":\"3px\",\"inHeader\":true},{\"tag\":\"A\",\"label\":\"Sobre\",\"href\":\"#sobre\",\"x\":888.109375,\"y\":14,\"w\":38.390625,\"h\":44,\"outline\":\"3px\",\"inHeader\":true},{\"tag\":\"A\",\"label\":\"Projetos\",\"href\":\"#projetos\",\"x\":950.5,\"y\":14,\"w\":53.375,\"h\":44,\"outline\":\"3px\",\"inHeader\":true},{\"tag\":\"A\",\"label\":\"Stack\",\"href\":\"#stack\",\"x\":1027.875,\"y\":14,\"w\":36.640625,\"h\":44,\"outline\":\"3px\",\"inHeader\":true},{\"tag\":\"A\",\"label\":\"Contato\",\"href\":\"#contato\",\"x\":1088.515625,\"y\":14,\"w\":51.484375,\"h\":44,\"outline\":\"3px\",\"inHeader\":true},{\"tag\":\"BUTTON\",\"label\":\"Ativar tema escuro\",\"href\":null,\"x\":1164,\"y\":14,\"w\":44,\"h\":44,\"outline\":\"3px\",\"inHeader\":true},{\"tag\":\"BUTTON\",\"label\":\"Switch to English\",\"href\":null,\"x\":1216,\"y\":14,\"w\":44,\"h\":44,\"outline\":\"3px\",\"inHeader\":true},{\"tag\":\"A\",\"label\":\"Ver projetos\",\"href\":\"#projetos\",\"x\":180,\"y\":384.1875,\"w\":153.90625,\"h\":49.765625,\"outline\":\"3px\",\"inHeader\":false},{\"tag\":\"A\",\"label\":\"LinkedIn\",\"href\":\"https://www.linkedin.com/in/lucianocvn\",\"x\":357.90625,\"y\":387.0625,\"w\":84.859375,\"h\":44,\"outline\":\"3px\",\"inHeader\":false},{\"tag\":\"A\",\"label\":\"Ver repositório de lcvnlabs no GitHub\",\"href\":\"https://github.com/lucianovianna/lcvnlabs\",\"x\":1154.8125,\"y\":476.171875,\"w\":105.171875,\"h\":44,\"outline\":\"3px\",\"inHeader\":false},{\"tag\":\"A\",\"label\":\"Conversar no LinkedIn\",\"href\":\"https://www.linkedin.com/in/lucianocvn\",\"x\":907.53125,\"y\":671.484375,\"w\":226.28125,\"h\":49.765625,\"outline\":\"3px\",\"inHeader\":false},{\"tag\":\"A\",\"label\":\"GitHub\",\"href\":\"https://github.com/lucianovianna\",\"x\":1153.8125,\"y\":674.359375,\"w\":74.1875,\"h\":44,\"outline\":\"3px\",\"inHeader\":false},{\"tag\":\"A\",\"label\":\"Voltar ao topo\",\"href\":\"#topo\",\"x\":1156.578125,\"y\":840.40625,\"w\":103.421875,\"h\":44,\"outline\":\"3px\",\"inHeader\":false}]",
+      "artifacts": [
+        {
+          "path": "keyboard-desktop.png",
+          "kind": "image",
+          "sha256": "4f3a0a231d4255d07537d46bdedc7fdbd8c7e4f6bf330f5ac39a32810059e24a",
+          "dimensions": {
+            "width": 1440,
+            "height": 900
+          }
+        }
+      ],
+      "steps": [
+        "Tab to skip link; Enter focuses main",
+        "Reload; Tab from skip through the next 13 links/buttons without wrapping outside the page",
+        "Check visible outlines, 44px heights, viewport bounds and no sticky-header occlusion"
+      ]
+    },
+    {
+      "id": "mobile-keyboard",
+      "status": "pass",
+      "state": "mobile keyboard",
+      "environment": {
+        "kind": "browser",
+        "name": "Chromium 156.0.8078.4 headless via CDP",
+        "width": 390,
+        "height": 900,
+        "deviceScaleFactor": 1
+      },
+      "observed": "About title top 140, header bottom 73",
+      "artifacts": [
+        {
+          "path": "mobile-menu.png",
+          "kind": "image",
+          "sha256": "60dafc16f7e8337c99488b61987475e33ce788829eb79861b2821f6479ae6fcf",
+          "dimensions": {
+            "width": 390,
+            "height": 900
+          }
+        }
+      ],
+      "steps": [
+        "Enter opens summary",
+        "Tab to About; Enter navigates and closes menu",
+        "Space opens; Escape closes and returns focus",
+        "Outside click closes; switching to desktop closes"
+      ]
+    },
+    {
+      "id": "touch-and-persistence",
+      "status": "pass",
+      "state": "touch and persistence",
+      "environment": {
+        "kind": "browser",
+        "name": "Chromium 156.0.8078.4 headless via CDP",
+        "width": 390,
+        "height": 900,
+        "deviceScaleFactor": 1
+      },
+      "observed": "Emulated touch, not physical hardware.",
+      "artifacts": [
+        {
+          "path": "touch-dark-en.png",
+          "kind": "image",
+          "sha256": "96e68be1924b4567557069cb338d1164ef90983b2cba78636ec2b6c90016826c",
+          "dimensions": {
+            "width": 390,
+            "height": 900
+          }
+        }
+      ],
+      "steps": [
+        "Synthesized Chromium touch opens menu",
+        "Touch Projects closes menu and navigates",
+        "Touch language and theme",
+        "Reload retains EN/dark"
+      ]
+    },
+    {
+      "id": "reduced-motion",
+      "status": "pass",
+      "state": "reduced motion",
+      "environment": {
+        "kind": "browser",
+        "name": "Chromium 156.0.8078.4 headless via CDP",
+        "width": 390,
+        "height": 900,
+        "deviceScaleFactor": 1
+      },
+      "observed": "{\"scroll\":\"auto\",\"transition\":\"0s\",\"animation\":\"none\"}",
+      "artifacts": [
+        {
+          "path": "reduced-motion.png",
+          "kind": "image",
+          "sha256": "96d95b932b95bb56bf36e378828ec9863989205b7d19e16713d8fb6bcfac2075",
+          "dimensions": {
+            "width": 390,
+            "height": 900
+          }
+        }
+      ],
+      "steps": [
+        "Emulate reduce",
+        "Reload",
+        "Read effective scroll, transition and animation styles"
+      ]
+    },
+    {
+      "id": "blocked-storage",
+      "status": "pass",
+      "state": "blocked storage",
+      "environment": {
+        "kind": "browser",
+        "name": "Chromium 156.0.8078.4 headless via CDP",
+        "width": 390,
+        "height": 900,
+        "deviceScaleFactor": 1
+      },
+      "observed": "Controls work without storage; manual theme survives OS changes in the current page.",
+      "artifacts": [
+        {
+          "path": "blocked-storage.png",
+          "kind": "image",
+          "sha256": "96e68be1924b4567557069cb338d1164ef90983b2cba78636ec2b6c90016826c",
+          "dimensions": {
+            "width": 390,
+            "height": 900
+          }
+        }
+      ],
+      "steps": [
+        "Make localStorage getter throw",
+        "Reload and use both toggles",
+        "Change OS color preference after manual selection"
+      ]
+    },
+    {
+      "id": "preference-recovery",
+      "status": "pass",
+      "state": "preference recovery",
+      "environment": {
+        "kind": "browser",
+        "name": "Chromium 156.0.8078.4 headless via CDP",
+        "width": 390,
+        "height": 900,
+        "deviceScaleFactor": 1
+      },
+      "observed": "Invalid values recovered; system theme changes honored.",
+      "artifacts": [
+        {
+          "path": "system-theme.png",
+          "kind": "image",
+          "sha256": "96d95b932b95bb56bf36e378828ec9863989205b7d19e16713d8fb6bcfac2075",
+          "dimensions": {
+            "width": 390,
+            "height": 900
+          }
+        }
+      ],
+      "steps": [
+        "Invalid stored theme/locale fall back to system/PT",
+        "Clear storage",
+        "OS color change follows system without manual override"
+      ]
+    },
+    {
+      "id": "no-javascript",
+      "status": "pass",
+      "state": "no javascript",
+      "environment": {
+        "kind": "browser",
+        "name": "Chromium 156.0.8078.4 headless via CDP",
+        "width": 390,
+        "height": 900,
+        "deviceScaleFactor": 1
+      },
+      "observed": "Content, links and native menu work without scripts.",
+      "artifacts": [
+        {
+          "path": "no-javascript.png",
+          "kind": "image",
+          "sha256": "f1a4d16c084fcd0030da658445809a8f9c2a2c75377a26fd6222c638bd89d885",
+          "dimensions": {
+            "width": 390,
+            "height": 2618
+          }
+        },
+        {
+          "path": "no-javascript-menu.png",
+          "kind": "image",
+          "sha256": "faad226536c824b6ed59b5e7adab8cbe2a676c2e1ab6e3fe83682a824a42245f",
+          "dimensions": {
+            "width": 390,
+            "height": 900
+          }
+        }
+      ],
+      "steps": [
+        "Disable scripts and reload",
+        "Confirm five sections remain visible",
+        "Confirm nonfunctional preference controls stay hidden",
+        "Open native navigation disclosure"
+      ]
+    },
+    {
+      "id": "contrast-light",
+      "status": "pass",
+      "state": "Portuguese, light theme",
+      "environment": {
+        "kind": "browser",
+        "name": "Chromium 156.0.8078.4 headless via CDP",
+        "width": 1440,
+        "height": 900,
+        "deviceScaleFactor": 1
+      },
+      "observed": "Measured 59 rendered text nodes using computed foreground and nearest nontransparent background; no opacity/translucent text involved. Minimum contrast 5.01:1. Does not certify general accessibility compliance.",
+      "artifacts": [
+        {
+          "path": "contrast-light.png",
+          "kind": "image",
+          "sha256": "d7af88bb05a865abdf93d25fd6c7d6ca5ba3f2daba4268d42d89d0cea75f18d5",
+          "dimensions": {
+            "width": 1440,
+            "height": 900
+          }
+        }
+      ]
+    },
+    {
+      "id": "contrast-dark",
+      "status": "pass",
+      "state": "Portuguese, dark theme",
+      "environment": {
+        "kind": "browser",
+        "name": "Chromium 156.0.8078.4 headless via CDP",
+        "width": 1440,
+        "height": 900,
+        "deviceScaleFactor": 1
+      },
+      "observed": "Measured 59 rendered text nodes using computed foreground and nearest nontransparent background; no opacity/translucent text involved. Minimum contrast 6.97:1. Does not certify general accessibility compliance.",
+      "artifacts": [
+        {
+          "path": "contrast-dark.png",
+          "kind": "image",
+          "sha256": "03e076335aaad84a39a477ceb61d116608b694dfadadccf186660d51824b4d59",
+          "dimensions": {
+            "width": 1440,
+            "height": 900
+          }
+        }
+      ]
+    },
+    {
+      "id": "top-navigation",
+      "status": "pass",
+      "state": "At top after activating footer link",
+      "environment": {
+        "kind": "browser",
+        "name": "Chromium 156.0.8078.4 headless via CDP",
+        "width": 1440,
+        "height": 900,
+        "deviceScaleFactor": 1
+      },
+      "observed": "Scroll position changed from 1005 to 0. Document anchor avoids sticky-header positioning.",
+      "artifacts": [
+        {
+          "path": "top-navigation.png",
+          "kind": "image",
+          "sha256": "fe6047e9b24f8448070f14807ad44b0f5714a5853ed52ff045c83a27a65588db",
+          "dimensions": {
+            "width": 1440,
+            "height": 900
+          }
+        }
+      ],
+      "steps": [
+        "Scroll to footer",
+        "Activate Back to top by pointer",
+        "Wait for scroll to settle",
+        "Confirm scrollY equals zero"
+      ]
+    }
+  ],
+  "unresolved": [],
+  "limitations": [
+    "Emulated Chromium only; no physical device, Safari or Firefox.",
+    "No real screen reader, text enlargement, Lighthouse or performance profiling.",
+    "Target used for hierarchy and visual direction; final total document height, copy, exact brand and technology list differ. No 1:1 fidelity claim.",
+    "Google Fonts remains external; Inter was loaded in these captures.",
+    "Motion checked through reduced-motion computed styles; no animation timing or frame-rate claims."
+  ]
+}

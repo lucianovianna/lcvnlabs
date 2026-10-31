@@ -1,5 +1,9 @@
 # SDD — Portfólio Pessoal
 
+> Registro histórico da v1. As decisões visuais do redesign estão em
+> [DESIGN.md](../../DESIGN.md), com validação em
+> [docs/design/verification.md](../design/verification.md).
+
 ## 1. Visão Geral
 
 Site de portfólio pessoal com foco em apresentação profissional como **Engenheiro de Software Sênior · Full Stack**, atraindo oportunidades remotas de emprego (CLT, PJ, freela). O site transmite clareza e competência através de um design minimalista, com suporte bilíngue (PT/EN) e dark mode.
