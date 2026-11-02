@@ -53,7 +53,7 @@ export const en: I18n = {
       },
       {
         name: 'Pokédex',
-        description: 'A Pokédex with search, sorting and Pokémon details using the PokéAPI. I built it as a junior developer and later returned to the code to improve accessibility and error handling.',
+        description: 'A Pokédex with search, sorting and Pokémon details using the PokéAPI. I built it as an intern and later returned to the code to improve accessibility and error handling.',
         stack: ['Vue.js', 'PokéAPI', 'Vite'],
         repo: 'https://github.com/lucianovianna/pokedex-vuejs',
         repoLabel: 'View the Pokédex repository on GitHub',

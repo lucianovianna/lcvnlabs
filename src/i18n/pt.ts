@@ -51,7 +51,7 @@ export const pt = {
       },
       {
         name: 'Pokédex',
-        description: 'Pokédex com busca, ordenação e detalhes de Pokémon usando a PokéAPI. Criei o projeto quando era dev júnior e depois voltei ao código para melhorar a acessibilidade e o tratamento de erros.',
+        description: 'Pokédex com busca, ordenação e detalhes de Pokémon usando a PokéAPI. Criei o projeto quando era estagiário e depois voltei ao código para melhorar a acessibilidade e o tratamento de erros.',
         stack: ['Vue.js', 'PokéAPI', 'Vite'],
         repo: 'https://github.com/lucianovianna/pokedex-vuejs',
         repoLabel: 'Ver repositório da Pokédex no GitHub',
